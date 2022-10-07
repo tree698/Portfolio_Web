@@ -1,14 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
+import About from './page/about/about';
+import Contact from './page/contact/contact';
+import Home from './page/home/home';
+import Portfolio from './page/portfolio/portfolio';
+import Projects from './page/projects/projects';
 
 const App = (props) => {
   return (
-    <div>
-      <h1>Let's Start!</h1>
-      <img style={{ width: '1100px' }} src="images/me4.png" alt="" />
-      <img style={{ width: '800px' }} src="images/me5.png" alt="" />
-      <img style={{ width: '800px' }} src="images/volunteer.png" alt="" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
