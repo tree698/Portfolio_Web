@@ -13,6 +13,18 @@
   --color-orange: #feb546;
   --color-black: #000000;
 
+  --color-background: #efefef;
+  --color-background-outer: #ecf1f4;
+  --color-background-inner: #f2f4f6;
+
+  --color-font-dark: #2d2d2d;
+  --color-font-light: #565656;
+  --color-font: #475258;
+  --color-font-blue: #0c90e4;
+
+  --color-button: #0c90e4;
+  --color-button-hover: #565656;
+
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
@@ -26,7 +38,8 @@
   --weight-regular: 400;
 
   /* size */
-  --size-border-radius: 6px;
+  --size-border-radius-big: 30px;
+  --size-border-radius-btn: 10px;
 
   /* Animation */
   --animation-duration: 300ms;
@@ -73,7 +86,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightgray;
+  background-color: var(--color-background-outer);
 }
 
 code {
@@ -90,6 +103,7 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--color-font-light);
 }
 
 ul {

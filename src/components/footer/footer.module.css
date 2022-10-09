@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.github {
+  font-size: 120px;
+}
