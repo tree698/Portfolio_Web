@@ -34,7 +34,7 @@
 
 .itemBtn,
 .talkBtn {
-  font-size: var(--font-small);
+  font-size: var(--font-regular);
 }
 
 .talkBtn {
