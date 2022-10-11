@@ -33,7 +33,7 @@ const Header = ({ addable }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.header}>
       <button onClick={onImgClick}>
         <img
           className={styles.logo}

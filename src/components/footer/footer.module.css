@@ -1,9 +1,30 @@
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 16px 40px;
+  align-items: center;
+  margin: 0 100px 20px 100px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
 }
 
 .github {
-  font-size: 120px;
+  font-size: 44px;
+  margin-left: 20px;
+  color: var(--color-button);
+  transition: all var(--animation-duration) ease;
+}
+
+.github:hover {
+  transform: rotate(360deg) scale(1.16);
+  color: var(--color-dark-pink);
+}
+
+.email,
+.right {
+  font-size: var(--font-regular);
+  color: var(--color-font-dark);
 }
