@@ -6,7 +6,7 @@
 }
 
 .main {
-  max-width: 1400px;
+  max-width: 76%;
   height: 76%;
 
   display: flex;
@@ -84,5 +84,5 @@
 }
 
 .image {
-  height: 70%;
+  width: 30%;
 }

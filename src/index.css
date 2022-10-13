@@ -26,11 +26,11 @@
   --color-button-hover: #565656;
 
   /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-large: 33px;
+  --font-medium: 20px;
+  --font-regular: 12px;
+  --font-small: 11px;
+  --font-micro: 9px;
 
   /* Font weight */
   --weight-bold: 700;
@@ -38,11 +38,15 @@
   --weight-regular: 400;
 
   /* size */
-  --size-border-radius-big: 30px;
-  --size-border-radius-btn: 10px;
+  --size-border-radius-big: 12px;
+  --size-border-radius-btn: 4px;
 
   /* Animation */
   --animation-duration: 300ms;
+
+  /* Responsive */
+  --tablet: 768px
+  --desktop: 1024px
 }
 
 /* Typography */

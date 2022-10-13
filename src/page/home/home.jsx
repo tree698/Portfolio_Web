@@ -20,7 +20,7 @@ const Home = (props) => {
   return (
     <section className={styles.container}>
       <Header addable={true} />
-      <main className={styles.main}>
+      {/* <main className={styles.main}>
         <div className={styles.content}>
           <div className={styles.title}>
             <h2 className={styles.hello}>Hello I'm</h2>
@@ -70,7 +70,7 @@ const Home = (props) => {
           </div>
         </div>
         <img className={styles.image} src="images/me5.png" alt="" />
-      </main>
+      </main> */}
       <Footer />
     </section>
   );
