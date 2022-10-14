@@ -11,32 +11,36 @@
 }
 
 .items {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
   display: none;
 }
 
 .items.open {
-  width: 100%;
   display: block;
-  text-align: center;
 }
 
 .item {
-  margin: 3px 0;
+  width: 74%;
+  padding: 3px 0;
+  margin: 3px auto;
+  background-color: var(--color-super-light-grey);
+  border-radius: var(--size-border-radius-btn);
 }
 
 .itemBtn {
+  width: 100%;
   transition: all var(--animation-duration) ease-out;
 }
 
 .itemBtn.active {
   color: var(--color-font-blue);
-  border-bottom: 2px solid var(--color-font-blue);
 }
 
 .itemBtn:hover {
   transform: scale(1.03);
   color: var(--color-font-blue);
-  border-bottom: 2px solid var(--color-font-blue);
 }
 
 .itemBtn,
@@ -66,10 +70,10 @@
   background-color: var(--color-button-hover);
 }
 
-.navbarBtn {
+.barBtn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 22px;
+  right: 29px;
   font-size: var(--font-medium);
 }
 
@@ -100,14 +104,24 @@
 
   .items,
   .items.open {
-    width: 100%;
-    display: block;
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
   .item {
+    width: auto;
     margin: 0 8px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .itemBtn.active {
+    border-bottom: 2px solid var(--color-font-blue);
+  }
+
+  .itemBtn:hover {
+    border-bottom: 2px solid var(--color-font-blue);
   }
 
   .talkBtn {
@@ -116,7 +130,7 @@
     margin-top: 0;
   }
 
-  .navbarBtn {
+  .barBtn {
     display: none;
   }
 }

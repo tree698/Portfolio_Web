@@ -1,39 +1,43 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 
 const Header = ({ addable }) => {
-  const [navbarBtn, setNavbarBtn] = useState(false);
+  const navigate = useNavigate();
+  const [barBtn, setBarBtn] = useState(false);
   const [homeBtn, setHomeBtn] = useState(false);
   const [portfolioBtn, setPortfolioBtn] = useState(false);
   const [projectsBtn, setProjectsBtn] = useState(false);
   const [aboutBtn, setAboutBtn] = useState(false);
-  const navigate = useNavigate();
+
+  useEffect(() => {
+    setBarBtn(true);
+  }, []);
+
+  const onImgClick = () => {
+    navigate('/');
+  };
 
   const onClick = (event) => {
-    setHomeBtn(false);
-    setPortfolioBtn(false);
-    setProjectsBtn(false);
-    setAboutBtn(false);
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
-        setHomeBtn(true);
         navigate('/');
+        setHomeBtn(true);
         break;
       case 'Portfolio':
-        setPortfolioBtn(true);
         navigate('/portfolio');
+        setPortfolioBtn(true);
         break;
       case 'Projects':
-        setProjectsBtn(true);
         navigate('/projects');
+        setProjectsBtn(true);
         break;
       case 'About me':
-        setAboutBtn(true);
         navigate('/about');
+        setAboutBtn(true);
         break;
       case "LET'S TALK":
         navigate('/contact');
@@ -43,12 +47,8 @@ const Header = ({ addable }) => {
     }
   };
 
-  const onImgClick = () => {
-    navigate('/');
-  };
-
-  const onNavbarClick = () => {
-    navbarBtn ? setNavbarBtn(false) : setNavbarBtn(true);
+  const onBarClick = () => {
+    barBtn ? setBarBtn(false) : setBarBtn(true);
   };
 
   return (
@@ -62,7 +62,7 @@ const Header = ({ addable }) => {
       </button>
       <ul
         className={
-          navbarBtn ? `${styles.items}` : `${styles.items} ${styles.open}`
+          barBtn ? `${styles.items}` : `${styles.items} ${styles.open}`
         }
       >
         <li className={styles.item}>
@@ -120,7 +120,7 @@ const Header = ({ addable }) => {
         </button>
       )}
 
-      <button onClick={onNavbarClick} className={styles.navbarBtn}>
+      <button onClick={onBarClick} className={styles.barBtn}>
         <FontAwesomeIcon icon={faBars} />
       </button>
     </div>
