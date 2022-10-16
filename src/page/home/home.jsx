@@ -49,7 +49,7 @@ const Home = (props) => {
                 <img className={styles.itemImg} src="images/logo1.png" alt="" />
               </div>
               <div className={styles.itemInfo_wrap}>
-                <h2 className={styles.itemTitle}>14+ Side-Projects</h2>
+                <h2 className={styles.itemTitle}>14+ Small-Projects</h2>
                 <p className={styles.itemDescript}>
                   A reliable Web ProgrammerA reliable Web ProgrammerA reliable
                   Web ProgrammerA

@@ -110,7 +110,7 @@ const Header = ({ addable }) => {
                 : `${styles.itemBtn}`
             }
           >
-            About me
+            About
           </button>
         </li>
       </ul>
