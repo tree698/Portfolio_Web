@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 
-const Header = ({ addable }) => {
+const Header = (props) => {
   const navigate = useNavigate();
   const [barBtn, setBarBtn] = useState(false);
   const [homeBtn, setHomeBtn] = useState(false);
@@ -38,9 +38,6 @@ const Header = ({ addable }) => {
       case 'About me':
         navigate('/about');
         setAboutBtn(true);
-        break;
-      case "LET'S TALK":
-        navigate('/contact');
         break;
       default:
         navigate('/');
@@ -114,12 +111,6 @@ const Header = ({ addable }) => {
           </button>
         </li>
       </ul>
-      {addable && (
-        <button onClick={onClick} className={styles.talkBtn}>
-          LET'S TALK
-        </button>
-      )}
-
       <button onClick={onBarClick} className={styles.barBtn}>
         <FontAwesomeIcon icon={faBars} />
       </button>

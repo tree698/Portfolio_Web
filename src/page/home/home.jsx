@@ -17,9 +17,13 @@ const Home = (props) => {
     navigate('/about');
   };
 
+  const onTalkClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className={styles.container}>
-      <Header addable={true} />
+      <Header />
       <main className={styles.main}>
         <div className={styles.content}>
           <div className={styles.title}>
@@ -31,6 +35,9 @@ const Home = (props) => {
               Programmer
             </h3>
           </div>
+          <button onClick={onTalkClick} className={styles.talkBtn}>
+            LET'S TALK
+          </button>
           <div className={styles.items}>
             <button className={styles.item} onClick={onGoToPortfolio}>
               <div className={styles.itemImg_wrap}>
@@ -39,8 +46,7 @@ const Home = (props) => {
               <div className={styles.itemInfo_wrap}>
                 <h2 className={styles.itemTitle}>Full Stack</h2>
                 <p className={styles.itemDescript}>
-                  A reliable Web ProgrammerA reliable Web ProgrammerA reliable
-                  Web ProgrammerA
+                  A reliable Web ProgrammerA reliable Web
                 </p>
               </div>
             </button>
@@ -51,8 +57,7 @@ const Home = (props) => {
               <div className={styles.itemInfo_wrap}>
                 <h2 className={styles.itemTitle}>14+ Small-Projects</h2>
                 <p className={styles.itemDescript}>
-                  A reliable Web ProgrammerA reliable Web ProgrammerA reliable
-                  Web ProgrammerA
+                  A reliable Web ProgrammerA reliable Web
                 </p>
               </div>
             </button>
@@ -63,8 +68,7 @@ const Home = (props) => {
               <div className={styles.itemInfo_wrap}>
                 <h2 className={styles.itemTitle}>Clean Code</h2>
                 <p className={styles.itemDescript}>
-                  A reliable Web ProgrammerA reliable Web ProgrammerA reliable
-                  Web ProgrammerA
+                  A reliable Web ProgrammerA reliable Web
                 </p>
               </div>
             </button>

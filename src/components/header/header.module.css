@@ -43,36 +43,13 @@
   color: var(--color-font-blue);
 }
 
-.itemBtn,
-.talkBtn {
+.itemBtn {
   font-size: var(--font-regular);
-}
-
-.talkBtn {
-  width: 100px;
-  height: 30px;
-
-  margin-top: 12px;
-  align-self: center;
-  color: var(--color-white);
-  font-weight: var(--weight-bold);
-  background-color: var(--color-font-blue);
-  border-radius: var(--size-border-radius-btn);
-  transition: all var(--animation-duration) ease-out;
-
-  -webkit-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  -moz-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-}
-
-.talkBtn:hover {
-  transform: scale(1.04);
-  background-color: var(--color-button-hover);
 }
 
 .barBtn {
   position: absolute;
-  top: 20px;
+  top: 24px;
   right: 20px;
   font-size: var(--font-medium);
 }
@@ -94,7 +71,7 @@
   .header {
     flex-direction: row;
     align-items: center;
-    padding: 30px 60px 0 60px;
+    padding: 30px 50px 0 50px;
   }
 
   .logo {
@@ -106,7 +83,7 @@
   .items.open {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .item {
@@ -124,15 +101,8 @@
     border-bottom: 2px solid var(--color-font-blue);
   }
 
-  .itemBtn,
-  .talkBtn {
+  .itemBtn {
     font-size: var(--font-regular);
-  }
-
-  .talkBtn {
-    width: 180px;
-    height: 40px;
-    margin-top: 0;
   }
 
   .barBtn {
@@ -155,20 +125,14 @@
   }
 
   .header {
-    padding: 60px 140px 0 140px;
+    padding: 50px 100px 0 100px;
   }
 
   .item {
-    margin: 0 22px;
+    margin: 0 16px;
   }
 
-  .itemBtn,
-  .talkBtn {
+  .itemBtn {
     font-size: var(--font-medium);
-  }
-
-  .talkBtn {
-    width: 250px;
-    height: 60px;
   }
 }
