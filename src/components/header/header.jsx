@@ -18,26 +18,27 @@ const Header = (props) => {
 
   const onImgClick = () => {
     navigate('/');
+    setHomeBtn(true);
   };
 
   const onClick = (event) => {
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
+        // setHomeBtn(true);
         navigate('/');
-        setHomeBtn(true);
         break;
       case 'Portfolio':
+        // setPortfolioBtn(true);
         navigate('/portfolio');
-        setPortfolioBtn(true);
         break;
       case 'Projects':
+        // setProjectsBtn(true);
         navigate('/projects');
-        setProjectsBtn(true);
         break;
-      case 'About me':
+      case 'About':
+        // setAboutBtn(true);
         navigate('/about');
-        setAboutBtn(true);
         break;
       default:
         navigate('/');
