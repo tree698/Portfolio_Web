@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
 import styles from './home.module.css';
 import { useNavigate } from 'react-router-dom';
 

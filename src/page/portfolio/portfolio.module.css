@@ -1,0 +1,243 @@
+.container {
+  width: 100vw;
+  text-align: center;
+}
+
+.main {
+  max-width: 310px;
+  margin: auto;
+}
+
+.content {
+  padding: 20px 24px;
+}
+
+.portfolioMenu {
+  margin-top: 36px;
+  border: 2px solid var(--color-button);
+  border-radius: var(--size-border-radius-btn);
+  background-color: var(--color-white);
+}
+
+.menuBtn {
+  background-color: var(--color-background-outer);
+  transform: translateY(-16px);
+}
+
+.menuBtn:hover {
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius-btn);
+}
+
+.menuBtn:hover::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 60%;
+  border-bottom: 2px solid var(--color-button);
+}
+
+.menuBtn.active {
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius-btn);
+}
+
+.menuBtn.active::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 60%;
+  border-bottom: 2px solid var(--color-button);
+}
+
+.portfolioImg_wrap,
+.demoImg_wrap {
+  width: 90%;
+  margin: 14px auto;
+  padding: 10px;
+
+  background-color: var(--color-background-inner);
+  border-radius: var(--size-border-radius-big);
+  -webkit-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+}
+
+.portfolioImg,
+.demoImg {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--size-border-radius-btn);
+}
+
+.demoTitle {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 40px;
+    --font-medium: 24px;
+    --font-regular: 15px;
+    --font-small: 13px;
+    --font-micro: 11px;
+
+    /* size */
+    --size-border-radius-big: 24px;
+    --size-border-radius-btn: 8px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: var(--font-large);
+    margin: 14px 0px;
+  }
+
+  h2 {
+    font-size: var(--font-medium);
+    margin: 7px 0;
+  }
+
+  h3 {
+    /* font-size: var(--font-regular); */
+    font-size: var(--font-medium);
+    margin: 7px 0;
+  }
+
+  p {
+    font-size: var(--font-regular);
+    margin: 4px 0;
+  }
+
+  .main {
+    max-width: 688px;
+  }
+
+  .content {
+    padding: 30px 44px;
+  }
+
+  .portfolioMenu {
+    width: 98%;
+    margin: 44px auto;
+    border: 3px solid var(--color-button);
+  }
+
+  .menuBtn {
+    transform: translateY(-20px);
+  }
+
+  .menuBtn:hover::after {
+    border-bottom: 3px solid var(--color-button);
+  }
+
+  .menuBtn.active::after {
+    border-bottom: 3px solid var(--color-button);
+  }
+
+  .portfolioImg_wrap {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .demoImg_wrap {
+    width: 46%;
+    margin: 20px auto;
+  }
+
+  .portfolioImg_wrap,
+  .demoImg_wrap {
+    padding: 20px;
+  }
+
+  .demoTitle {
+    margin-top: 40px;
+  }
+
+  .demo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .demoImg {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+    /* size */
+    --size-border-radius-big: 30px;
+    --size-border-radius-btn: 10px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: var(--font-large);
+    margin: 16px 0px;
+  }
+
+  h2 {
+    font-size: var(--font-medium);
+    margin: 8px 0;
+  }
+
+  h3 {
+    /* font-size: var(--font-regular); */
+    font-size: var(--font-medium);
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: var(--font-regular);
+    margin: 4px 0;
+  }
+
+  .main {
+    max-width: 1200px;
+  }
+
+  .content {
+    padding: 50px;
+  }
+
+  .portfolioMenu {
+    width: 80%;
+    margin: 50px auto;
+    border: 3px solid var(--color-button);
+  }
+
+  .menuBtn {
+    transform: translateY(-24px);
+  }
+
+  .menuBtn:hover::after {
+    border-bottom: 3px solid var(--color-button);
+  }
+
+  .menuBtn.active::after {
+    border-bottom: 3px solid var(--color-button);
+  }
+
+  .portfolioImg_wrap {
+    width: 64%;
+    margin: 40px auto;
+  }
+
+  .portfolioImg_wrap,
+  .demoImg_wrap {
+    padding: 20px;
+  }
+
+  .demoTitle {
+    margin-top: 80px;
+  }
+}

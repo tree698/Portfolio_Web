@@ -1,29 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import Header from '../../components/header/header';
 import OverView from '../../components/overView/overView';
 import TechStack from '../../components/techStack/techStack';
 import Features from '../../components/features/features';
 import Deployment from '../../components/deployment/deployment';
-import Footer from '../../components/footer/footer';
 import styles from './portfolio.module.css';
 
 const Portfolio = (props) => {
   const navigate = useNavigate();
+  const [overviewBtn, setOverviewBtn] = useState(false);
+  const [techStackBtn, setTechStackBtn] = useState(false);
+  const [featuresBtn, setFeaturesBtn] = useState(false);
+  const [deploymentBtn, setDeploymentBtn] = useState(false);
+
+  useEffect(() => {
+    navigate('/portfolio/overview');
+    setOverviewBtn(true);
+  }, []);
 
   const onClick = (event) => {
+    setOverviewBtn(false);
+    setTechStackBtn(false);
+    setFeaturesBtn(false);
+    setDeploymentBtn(false);
     const target = event.target.innerText;
     switch (target) {
       case 'Overview':
+        setOverviewBtn(true);
         navigate('/portfolio/overview');
         break;
       case 'Tech Stack':
+        setTechStackBtn(true);
         navigate('/portfolio/techstack');
         break;
       case 'Features':
+        setFeaturesBtn(true);
         navigate('/portfolio/features');
         break;
       case 'Deployment':
+        setDeploymentBtn(true);
         navigate('/portfolio/deployment');
         break;
       default:
@@ -46,17 +61,42 @@ const Portfolio = (props) => {
               </div>
             </a>
             <div className={styles.portfolioMenu}>
-              <button className={styles.menuBtn} onClick={onClick}>
+              <button
+                className={
+                  overviewBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
                 <h3>Overview</h3>
               </button>
-              <button className={styles.menuBtn} onClick={onClick}>
+              <button
+                className={
+                  techStackBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
                 <h3>Tech Stack</h3>
               </button>
-              <button className={styles.menuBtn} onClick={onClick}>
+              <button
+                className={
+                  featuresBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
                 <h3>Features</h3>
               </button>
               <button
-                className={`${styles.menuBtn} ${styles.deployment}`}
+                className={
+                  deploymentBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
                 onClick={onClick}
               >
                 <h3>Deployment</h3>

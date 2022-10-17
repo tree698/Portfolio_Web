@@ -11,14 +11,20 @@ const Header = (props) => {
   const [portfolioBtn, setPortfolioBtn] = useState(false);
   const [projectsBtn, setProjectsBtn] = useState(false);
   const [aboutBtn, setAboutBtn] = useState(false);
+  const [contactBtn, setContactBtn] = useState(false);
 
   useEffect(() => {
     setBarBtn(true);
+    setHomeBtn(true);
   }, []);
 
   const onImgClick = () => {
     navigate('/');
     setHomeBtn(true);
+    setPortfolioBtn(false);
+    setProjectsBtn(false);
+    setAboutBtn(false);
+    setContactBtn(false);
   };
 
   const onClick = (event) => {
@@ -26,6 +32,7 @@ const Header = (props) => {
     setPortfolioBtn(false);
     setProjectsBtn(false);
     setAboutBtn(false);
+    setContactBtn(false);
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
@@ -43,6 +50,10 @@ const Header = (props) => {
       case 'About':
         setAboutBtn(true);
         navigate('/about');
+        break;
+      case 'Contact':
+        setContactBtn(true);
+        navigate('/contact');
         break;
       default:
         navigate('/');
@@ -113,6 +124,18 @@ const Header = (props) => {
             }
           >
             About
+          </button>
+        </li>
+        <li className={styles.item}>
+          <button
+            onClick={onClick}
+            className={
+              contactBtn
+                ? `${styles.itemBtn} ${styles.active}`
+                : `${styles.itemBtn}`
+            }
+          >
+            Contact
           </button>
         </li>
       </ul>
