@@ -23,7 +23,6 @@ const Home = (props) => {
 
   return (
     <section className={styles.container}>
-      <Header />
       <main className={styles.main}>
         <div className={styles.content}>
           <div className={styles.title}>
@@ -76,7 +75,6 @@ const Home = (props) => {
         </div>
         <img className={styles.image} src="images/me.png" alt="" />
       </main>
-      <Footer />
     </section>
   );
 };

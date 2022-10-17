@@ -6,10 +6,13 @@ import Projects from './page/projects/projects';
 import About from './page/about/about';
 import Contact from './page/contact/contact';
 import styles from './App.module.css';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 const App = (props) => {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio/*" element={<Portfolio />} />
@@ -17,6 +20,7 @@ const App = (props) => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

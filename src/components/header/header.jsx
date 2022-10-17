@@ -22,22 +22,26 @@ const Header = (props) => {
   };
 
   const onClick = (event) => {
+    setHomeBtn(false);
+    setPortfolioBtn(false);
+    setProjectsBtn(false);
+    setAboutBtn(false);
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
-        // setHomeBtn(true);
+        setHomeBtn(true);
         navigate('/');
         break;
       case 'Portfolio':
-        // setPortfolioBtn(true);
+        setPortfolioBtn(true);
         navigate('/portfolio');
         break;
       case 'Projects':
-        // setProjectsBtn(true);
+        setProjectsBtn(true);
         navigate('/projects');
         break;
       case 'About':
-        // setAboutBtn(true);
+        setAboutBtn(true);
         navigate('/about');
         break;
       default:

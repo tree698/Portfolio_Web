@@ -6,9 +6,7 @@ import styles from './projects.module.css';
 const Projects = (props) => {
   return (
     <div>
-      <Header addable={true} />
       <h1>Projects</h1>
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Header from '../../components/header/header';
 import OverView from '../../components/overView/overView';
 import TechStack from '../../components/techStack/techStack';
@@ -31,35 +31,69 @@ const Portfolio = (props) => {
     }
   };
   return (
-    <div>
-      <Header />
-      <main>
-        <section>
-          <h1>TalkTalk</h1>
-          <a href="#">
-            <img src="images/logo1.png" alt="" />
-          </a>
-          <div>
-            <button onClick={onClick}>Overview</button>
-            <button onClick={onClick}>Tech Stack</button>
-            <button onClick={onClick}>Features</button>
-            <button onClick={onClick}>Deployment</button>
-          </div>
-          <Routes>
-            <Route path="/overview" element={<OverView />} />
-            <Route path="/techstack" element={<TechStack />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/deployment" element={<Deployment />} />
-          </Routes>
-        </section>
+    <section className={styles.container}>
+      <main className={styles.main}>
+        <div className={styles.content}>
+          <section className={styles.portfilio}>
+            <h1 className={styles.portfolioTitle}>TalkTalk</h1>
+            <a href="#">
+              <div className={styles.portfolioImg_wrap}>
+                <img
+                  className={styles.portfolioImg}
+                  src="images/logo1.png"
+                  alt=""
+                />
+              </div>
+            </a>
+            <div className={styles.portfolioMenu}>
+              <button className={styles.menuBtn} onClick={onClick}>
+                <h3>Overview</h3>
+              </button>
+              <button className={styles.menuBtn} onClick={onClick}>
+                <h3>Tech Stack</h3>
+              </button>
+              <button className={styles.menuBtn} onClick={onClick}>
+                <h3>Features</h3>
+              </button>
+              <button
+                className={`${styles.menuBtn} ${styles.deployment}`}
+                onClick={onClick}
+              >
+                <h3>Deployment</h3>
+              </button>
+              <div className={styles.description}>
+                <Routes>
+                  <Route path="/overview" element={<OverView />} />
+                  <Route path="/techstack" element={<TechStack />} />
+                  <Route path="/features" element={<Features />} />
+                  <Route path="/deployment" element={<Deployment />} />
+                </Routes>
+              </div>
+            </div>
+          </section>
 
-        <section>
-          <h1>DEMO: SignIn & SignUp </h1>
-          <img src="images/logo1.png" alt="" />
-        </section>
+          <h1 className={styles.demoTitle}>DEMO</h1>
+          <section className={styles.demo}>
+            <div className={styles.demoImg_wrap}>
+              <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
+            </div>
+            <div className={styles.demoImg_wrap}>
+              <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              <h3 className={styles.demoImgTitle}>Upload </h3>
+            </div>
+            <div className={styles.demoImg_wrap}>
+              <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              <h3 className={styles.demoImgTitle}>Chatting </h3>
+            </div>
+            <div className={styles.demoImg_wrap}>
+              <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              <h3 className={styles.demoImgTitle}>Chatting </h3>
+            </div>
+          </section>
+        </div>
       </main>
-      <Footer />
-    </div>
+    </section>
   );
 };
 

@@ -6,9 +6,7 @@ import styles from './about.module.css';
 const About = (props) => {
   return (
     <div>
-      <Header addable={true} />
       <h1>About</h1>
-      <Footer />
     </div>
   );
 };
