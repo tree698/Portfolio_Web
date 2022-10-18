@@ -4,10 +4,12 @@ import styles from './projects.module.css';
 
 const Projects = (props) => {
   return (
-    <div>
-      <h1>Projects</h1>
+    <section className={styles.container}>
+      <main className={styles.main}>
+        <div className={styles.content}>Projects</div>
+      </main>
       <Footer />
-    </div>
+    </section>
   );
 };
 
