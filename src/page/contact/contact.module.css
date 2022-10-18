@@ -21,7 +21,7 @@
   max-width: 310px;
   margin-top: 100px;
   padding: 40px 15px;
-  background-color: var(--color-button);
+  /* background-color: var(--color-button); */
   border-radius: var(--size-border-radius-btn);
   text-align: center;
 
@@ -35,9 +35,9 @@
   background-color: var(--color-white);
   border-radius: var(--size-border-radius-btn);
 
-  -webkit-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
+  /* -webkit-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
   -moz-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
+  box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4); */
 }
 
 .coffeeImg {
@@ -51,7 +51,7 @@
 .github {
   margin: 4px 0;
   font-size: var(--font-large);
-  color: var(--color-button);
+  color: var(--color-light-grey);
   transition: all var(--animation-duration) ease-in-out;
 }
 
