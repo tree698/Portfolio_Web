@@ -49,8 +49,8 @@ const Portfolio = (props) => {
     <section className={styles.container}>
       <main className={styles.main}>
         <div className={styles.content}>
-          <section className={styles.portfilio}>
-            <h1 className={styles.portfolioTitle}>TalkTalk</h1>
+          <h1 className={styles.portfolioTitle}>TalkTalk</h1>
+          <section className={styles.portfolio}>
             <a href="#">
               <div className={styles.portfolioImg_wrap}>
                 <img
@@ -61,56 +61,59 @@ const Portfolio = (props) => {
               </div>
             </a>
             <div className={styles.portfolioMenu}>
-              <button
-                className={
-                  overviewBtn
-                    ? `${styles.menuBtn} ${styles.active}`
-                    : `${styles.menuBtn}`
-                }
-                onClick={onClick}
-              >
-                <h3>Overview</h3>
-              </button>
-              <button
-                className={
-                  techStackBtn
-                    ? `${styles.menuBtn} ${styles.active}`
-                    : `${styles.menuBtn}`
-                }
-                onClick={onClick}
-              >
-                <h3>Tech Stack</h3>
-              </button>
-              <button
-                className={
-                  featuresBtn
-                    ? `${styles.menuBtn} ${styles.active}`
-                    : `${styles.menuBtn}`
-                }
-                onClick={onClick}
-              >
-                <h3>Features</h3>
-              </button>
-              <button
-                className={
-                  deploymentBtn
-                    ? `${styles.menuBtn} ${styles.active}`
-                    : `${styles.menuBtn}`
-                }
-                onClick={onClick}
-              >
-                <h3>Deployment</h3>
-              </button>
-              <div className={styles.description}>
-                <Routes>
-                  <Route path="/overview" element={<OverView />} />
-                  <Route path="/techstack" element={<TechStack />} />
-                  <Route path="/features" element={<Features />} />
-                  <Route path="/deployment" element={<Deployment />} />
-                </Routes>
+              <div className={styles.menuBtn_container}>
+                <button
+                  className={
+                    overviewBtn
+                      ? `${styles.menuBtn} ${styles.active}`
+                      : `${styles.menuBtn}`
+                  }
+                  onClick={onClick}
+                >
+                  <h3>Overview</h3>
+                </button>
+                <button
+                  className={
+                    techStackBtn
+                      ? `${styles.menuBtn} ${styles.active}`
+                      : `${styles.menuBtn}`
+                  }
+                  onClick={onClick}
+                >
+                  <h3>Tech Stack</h3>
+                </button>
+                <button
+                  className={
+                    featuresBtn
+                      ? `${styles.menuBtn} ${styles.active}`
+                      : `${styles.menuBtn}`
+                  }
+                  onClick={onClick}
+                >
+                  <h3>Features</h3>
+                </button>
+                <button
+                  className={
+                    deploymentBtn
+                      ? `${styles.menuBtn} ${styles.active}`
+                      : `${styles.menuBtn}`
+                  }
+                  onClick={onClick}
+                >
+                  <h3>Deployment</h3>
+                </button>
               </div>
+
+              <Routes>
+                <Route path="/overview" element={<OverView />} />
+                <Route path="/techstack" element={<TechStack />} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/deployment" element={<Deployment />} />
+              </Routes>
             </div>
           </section>
+
+          <div className={styles.divider}></div>
 
           <h1 className={styles.demoTitle}>DEMO</h1>
           <section className={styles.demo}>

@@ -28,7 +28,6 @@ const Home = (props) => {
               Programmer
             </h3>
           </div>
-
           <div className={styles.items}>
             <button className={styles.item} onClick={onGoToPortfolio}>
               <div className={styles.itemImg_wrap}>

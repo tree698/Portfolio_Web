@@ -123,7 +123,7 @@ const Header = (props) => {
                 : `${styles.itemBtn}`
             }
           >
-            About
+            About me
           </button>
         </li>
       </ul>
