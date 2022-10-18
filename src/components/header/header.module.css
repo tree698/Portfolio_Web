@@ -69,6 +69,10 @@
   background-color: var(--color-button-hover);
 }
 
+.talkBtn.invisibility {
+  opacity: 0;
+}
+
 .barBtn {
   position: absolute;
   top: 24px;

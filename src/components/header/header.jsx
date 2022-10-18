@@ -11,6 +11,7 @@ const Header = (props) => {
   const [portfolioBtn, setPortfolioBtn] = useState(false);
   const [projectsBtn, setProjectsBtn] = useState(false);
   const [aboutBtn, setAboutBtn] = useState(false);
+  const [talkBtn, setTalkBtn] = useState(true);
 
   useEffect(() => {
     setBarBtn(true);
@@ -39,18 +40,18 @@ const Header = (props) => {
         setProjectsBtn(true);
         navigate('/projects');
         break;
-      case 'About':
+      case 'About me':
         setAboutBtn(true);
         navigate('/about');
+        break;
+      case "LET'S TALK":
+        navigate('/contact');
+        setTalkBtn(false);
         break;
       default:
         navigate('/');
     }
-  };
-
-  const onTalkClick = () => {
-    initializeBtn();
-    navigate('/contact');
+    setBarBtn(true);
   };
 
   const onBarClick = () => {
@@ -62,6 +63,7 @@ const Header = (props) => {
     setPortfolioBtn(false);
     setProjectsBtn(false);
     setAboutBtn(false);
+    setTalkBtn(true);
   }
 
   return (
@@ -127,9 +129,18 @@ const Header = (props) => {
           </button>
         </li>
       </ul>
-      <button onClick={onTalkClick} className={styles.talkBtn}>
+
+      <button
+        onClick={onClick}
+        className={
+          talkBtn
+            ? `${styles.talkBtn}`
+            : `${styles.talkBtn} ${styles.invisibility}`
+        }
+      >
         LET'S TALK
       </button>
+
       <button onClick={onBarClick} className={styles.barBtn}>
         <FontAwesomeIcon icon={faBars} />
       </button>
