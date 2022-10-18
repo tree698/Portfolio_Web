@@ -11,7 +11,6 @@ const Header = (props) => {
   const [portfolioBtn, setPortfolioBtn] = useState(false);
   const [projectsBtn, setProjectsBtn] = useState(false);
   const [aboutBtn, setAboutBtn] = useState(false);
-  const [contactBtn, setContactBtn] = useState(false);
 
   useEffect(() => {
     setBarBtn(true);
@@ -20,19 +19,12 @@ const Header = (props) => {
 
   const onImgClick = () => {
     navigate('/');
+    initializeBtn();
     setHomeBtn(true);
-    setPortfolioBtn(false);
-    setProjectsBtn(false);
-    setAboutBtn(false);
-    setContactBtn(false);
   };
 
   const onClick = (event) => {
-    setHomeBtn(false);
-    setPortfolioBtn(false);
-    setProjectsBtn(false);
-    setAboutBtn(false);
-    setContactBtn(false);
+    initializeBtn();
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
@@ -51,18 +43,26 @@ const Header = (props) => {
         setAboutBtn(true);
         navigate('/about');
         break;
-      case 'Contact':
-        setContactBtn(true);
-        navigate('/contact');
-        break;
       default:
         navigate('/');
     }
   };
 
+  const onTalkClick = () => {
+    initializeBtn();
+    navigate('/contact');
+  };
+
   const onBarClick = () => {
     barBtn ? setBarBtn(false) : setBarBtn(true);
   };
+
+  function initializeBtn() {
+    setHomeBtn(false);
+    setPortfolioBtn(false);
+    setProjectsBtn(false);
+    setAboutBtn(false);
+  }
 
   return (
     <div className={styles.header}>
@@ -126,19 +126,10 @@ const Header = (props) => {
             About
           </button>
         </li>
-        <li className={styles.item}>
-          <button
-            onClick={onClick}
-            className={
-              contactBtn
-                ? `${styles.itemBtn} ${styles.active}`
-                : `${styles.itemBtn}`
-            }
-          >
-            Contact
-          </button>
-        </li>
       </ul>
+      <button onClick={onTalkClick} className={styles.talkBtn}>
+        LET'S TALK
+      </button>
       <button onClick={onBarClick} className={styles.barBtn}>
         <FontAwesomeIcon icon={faBars} />
       </button>

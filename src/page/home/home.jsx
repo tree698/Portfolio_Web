@@ -15,10 +15,6 @@ const Home = (props) => {
     navigate('/about');
   };
 
-  const onTalkClick = () => {
-    navigate('/contact');
-  };
-
   return (
     <section className={styles.container}>
       <main className={styles.main}>
@@ -32,9 +28,7 @@ const Home = (props) => {
               Programmer
             </h3>
           </div>
-          <button onClick={onTalkClick} className={styles.talkBtn}>
-            LET'S TALK
-          </button>
+
           <div className={styles.items}>
             <button className={styles.item} onClick={onGoToPortfolio}>
               <div className={styles.itemImg_wrap}>
