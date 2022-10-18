@@ -5,6 +5,7 @@ import TechStack from '../../components/techStack/techStack';
 import Features from '../../components/features/features';
 import Deployment from '../../components/deployment/deployment';
 import styles from './portfolio.module.css';
+import Footer from '../../components/footer/footer';
 
 const Portfolio = (props) => {
   const navigate = useNavigate();
@@ -136,6 +137,7 @@ const Portfolio = (props) => {
           </section>
         </div>
       </main>
+      <Footer />
     </section>
   );
 };

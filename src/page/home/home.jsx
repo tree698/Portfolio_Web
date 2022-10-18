@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './home.module.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/footer/footer';
 
 const Home = (props) => {
   const navigate = useNavigate();
@@ -66,6 +67,7 @@ const Home = (props) => {
         </div>
         <img className={styles.image} src="images/me.png" alt="" />
       </main>
+      <Footer />
     </section>
   );
 };
