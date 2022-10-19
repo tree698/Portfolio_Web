@@ -53,7 +53,7 @@
 
 .menuBtn:hover {
   background-color: var(--color-white);
-  border-radius: var(--size-border-radius-btn);
+  border-radius: var(--size-border-radius-btn) var(--size-border-radius-btn) 0 0;
 }
 
 .menuBtn:hover::after {
