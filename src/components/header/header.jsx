@@ -4,67 +4,59 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 
-const Header = (props) => {
+const Header = ({
+  onBarClick,
+  onImg,
+  onHome,
+  onPortfolio,
+  onProjects,
+  onAbout,
+  onTalk,
+  barBtn,
+  homeBtn,
+  portfolioBtn,
+  projectsBtn,
+  aboutBtn,
+  talkBtn,
+}) => {
   const navigate = useNavigate();
-  const [barBtn, setBarBtn] = useState(false);
-  const [homeBtn, setHomeBtn] = useState(false);
-  const [portfolioBtn, setPortfolioBtn] = useState(false);
-  const [projectsBtn, setProjectsBtn] = useState(false);
-  const [aboutBtn, setAboutBtn] = useState(false);
-  const [talkBtn, setTalkBtn] = useState(true);
 
   useEffect(() => {
-    setBarBtn(true);
-    setHomeBtn(true);
+    navigate('/');
   }, []);
 
   const onImgClick = () => {
     navigate('/');
-    initializeBtn();
-    setHomeBtn(true);
+    onImg();
   };
 
   const onClick = (event) => {
-    initializeBtn();
     const taregt = event.target.innerText;
     switch (taregt) {
       case 'Home':
-        setHomeBtn(true);
         navigate('/');
+        onHome();
         break;
       case 'Portfolio':
-        setPortfolioBtn(true);
         navigate('/portfolio');
+        onPortfolio();
         break;
       case 'Projects':
-        setProjectsBtn(true);
         navigate('/projects');
+        onProjects();
         break;
       case 'About me':
-        setAboutBtn(true);
         navigate('/about');
+        onAbout();
         break;
       case "LET'S TALK":
         navigate('/contact');
-        setTalkBtn(false);
+        onTalk();
         break;
       default:
         navigate('/');
     }
-    setBarBtn(true);
   };
-
-  const onBarClick = () => {
-    barBtn ? setBarBtn(false) : setBarBtn(true);
-  };
-
-  function initializeBtn() {
-    setHomeBtn(false);
-    setPortfolioBtn(false);
-    setProjectsBtn(false);
-    setAboutBtn(false);
-    setTalkBtn(true);
-  }
 
   return (
     <div className={styles.header}>
@@ -77,7 +69,7 @@ const Header = (props) => {
       </button>
       <ul
         className={
-          barBtn ? `${styles.items}` : `${styles.items} ${styles.open}`
+          barBtn ? `${styles.items} ${styles.open}` : `${styles.items}`
         }
       >
         <li className={styles.item}>
@@ -133,9 +125,7 @@ const Header = (props) => {
       <button
         onClick={onClick}
         className={
-          talkBtn
-            ? `${styles.talkBtn}`
-            : `${styles.talkBtn} ${styles.invisibility}`
+          talkBtn ? `${styles.talkBtn} ${styles.visible}` : `${styles.talkBtn}`
         }
       >
         LET'S TALK

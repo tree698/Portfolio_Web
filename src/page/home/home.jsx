@@ -3,17 +3,20 @@ import styles from './home.module.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/footer/footer';
 
-const Home = (props) => {
+const Home = ({ onPortfolio, onProjects, onAbout }) => {
   const navigate = useNavigate();
 
   const onGoToPortfolio = () => {
     navigate('/portfolio');
+    onPortfolio();
   };
   const onGoToProjects = () => {
     navigate('/projects');
+    onProjects();
   };
   const onGoToAbout = () => {
     navigate('/about');
+    onAbout();
   };
 
   return (
