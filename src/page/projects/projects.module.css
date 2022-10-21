@@ -66,77 +66,6 @@
   transform: scale(0.96) translateY(40px);
 }
 
-.project {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 140px;
-  margin: 2px;
-  background-color: var(--color-light-white);
-  border-radius: var(--size-border-radius-btn);
-
-  text-align: center;
-  border: 1px solid var(--color-super-light-grey);
-}
-
-.project.invisible {
-  display: none;
-}
-
-.project_img {
-  max-width: 100%;
-  max-height: 100%;
-  align-self: center;
-}
-
-.project_description {
-  position: absolute;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all var(--animation-duration) ease-in;
-  border-radius: var(--size-border-radius-btn);
-}
-
-.project:hover .project_description {
-  opacity: 0.8;
-  transform: translateY(0px);
-}
-
-.project_description h3 {
-  color: var(--color-orange);
-}
-
-.project_description span {
-  color: var(--color-white);
-}
-
-.project_description h3,
-.project_description span {
-  font-size: var(--font-regular);
-}
-
-.project_description h3:after {
-  content: '';
-  display: block;
-  position: relative;
-  left: 50%;
-  width: 50px;
-  height: 2px;
-  transform: translateX(-50%);
-  margin-top: 8px;
-  background-color: var(--color-dark-white);
-}
-
 @media screen and (min-width: 768px) {
   :root {
     /* Font size */
@@ -194,24 +123,6 @@
     height: 20px;
     line-height: 20px;
     top: -15px;
-  }
-
-  .project {
-    width: 220px;
-    height: 220px;
-  }
-
-  .project_description {
-    padding: 0 10px;
-  }
-
-  .project_description h3,
-  .project_description span {
-    font-size: var(--font-medium);
-  }
-
-  .project_description h3:after {
-    margin-top: 10px;
   }
 }
 
@@ -273,18 +184,5 @@
     height: 40px;
     line-height: 40px;
     top: -26px;
-  }
-
-  .project {
-    width: 260px;
-    height: 260px;
-  }
-
-  .project_description {
-    padding: 0 30px;
-  }
-
-  .project_description h3:after {
-    margin-top: 14px;
   }
 }

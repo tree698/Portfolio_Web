@@ -1,8 +1,68 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import DisplayProject from '../../components/displayProject/displayProject';
 import Footer from '../../components/footer/footer';
 import styles from './projects.module.css';
 
 const Projects = (props) => {
+  const defaultProject = [
+    {
+      id: 1,
+      href: '#',
+      dataName: 'html/css',
+      title: 'html/css',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 2,
+      href: '#',
+      dataName: 'html/css',
+      title: 'html/css',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 3,
+      href: '#',
+      dataName: 'react',
+      title: 'react',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 4,
+      href: '#',
+      dataName: 'react',
+      title: 'react',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 5,
+      href: '#',
+      dataName: 'node',
+      title: 'node',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 6,
+      href: '#',
+      dataName: 'node',
+      title: 'node',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 7,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 8,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+  ];
+
   const [all, setAll] = useState(true);
   const [html, setHtml] = useState(false);
   const [react, setReact] = useState(false);
@@ -10,27 +70,57 @@ const Projects = (props) => {
   const [others, setOthers] = useState(false);
 
   const [projects, setProjects] = useState(false);
+  const [project, setProject] = useState([]);
 
-  const [project1, setProject1] = useState(false);
-  const [project2, setProject2] = useState(false);
-  const [project3, setProject3] = useState(false);
-  const [project4, setProject4] = useState(false);
-  const [project5, setProject5] = useState(false);
-  const [project6, setProject6] = useState(false);
-  const [project7, setProject7] = useState(false);
-  const [project8, setProject8] = useState(false);
-  const [project9, setProject9] = useState(false);
-  const [project10, setProject10] = useState(false);
-  const [project11, setProject11] = useState(false);
-  const [project12, setProject12] = useState(false);
+  useEffect(() => setProject(defaultProject), []);
 
   const onClick = (e) => {
-    const projects = document.querySelectorAll('[data-type="project"]');
-    const filter =
-      e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    const target = e.target.dataset.filter;
 
-    projects.forEach((p) => console.log(p.dataset.type));
+    // 1. change color
+    initializeBtn();
+    switch (target) {
+      case 'all':
+        setAll(true);
+        break;
+      case 'html/css':
+        setHtml(true);
+        break;
+      case 'react':
+        setReact(true);
+        break;
+      case 'node':
+        setNode(true);
+        break;
+      case 'others':
+        setOthers(true);
+        break;
+      default:
+        setAll(true);
+    }
+
+    // 2.projects out
+    setProjects(true);
+
+    // 3. setTimeout => filter + projects in
+    setTimeout(() => {
+      if (target === 'all') {
+        setProject(defaultProject);
+      } else {
+        const filtered = defaultProject.filter((p) => p.dataName === target);
+        setProject(filtered);
+      }
+      setProjects(false);
+    }, 300);
   };
+
+  function initializeBtn() {
+    setAll(false);
+    setHtml(false);
+    setReact(false);
+    setNode(false);
+    setOthers(false);
+  }
 
   return (
     <section className={styles.container}>
@@ -99,211 +189,11 @@ const Projects = (props) => {
               ? `${styles.projects} ${styles.anim_out}`
               : `${styles.projects}`
           }
+          data-projects="projects"
         >
-          <a
-            href="#"
-            className={
-              project1
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project2
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project3
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="react"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project4
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="react"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project5
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="node"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project6
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="node"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project7
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="others"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project8
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="others"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project9
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project10
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project11
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            className={
-              project12
-                ? `${styles.project} ${styles.invisible}`
-                : `${styles.project}`
-            }
-            target="blank"
-            data-type="project"
-            data-name="html/css"
-          >
-            <img src="images/logo1.png" alt="" className={styles.project_img} />
-            <div className={styles.project_description}>
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML, CSS</span>
-            </div>
-          </a>
+          {project.map((project) => (
+            <DisplayProject key={project.id} project={project} />
+          ))}
         </div>
       </main>
       <Footer />
