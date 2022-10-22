@@ -1,15 +1,12 @@
-.container {
+/* .container {
   width: 100vw;
   padding-top: 95px;
-}
+} */
 
 .main {
+  padding-top: 95px;
   max-width: 310px;
   margin: auto;
-}
-
-.content {
-  padding: 20px 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -47,16 +44,9 @@
     margin: 4px 0;
   }
 
-  .container {
-    padding-top: 85px;
-  }
-
   .main {
+    padding-top: 85px;
     max-width: 688px;
-  }
-
-  .content {
-    padding: 30px;
   }
 }
 
@@ -95,15 +85,8 @@
     margin: 4px 0;
   }
 
-  .container {
-    padding-top: 110px;
-  }
-
   .main {
+    padding-top: 110px;
     max-width: 1200px;
-  }
-
-  .content {
-    padding: 40px;
   }
 }
