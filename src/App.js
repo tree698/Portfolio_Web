@@ -15,10 +15,25 @@ const App = (props) => {
   const [projectsBtn, setProjectsBtn] = useState(false);
   const [aboutBtn, setAboutBtn] = useState(false);
   const [talkBtn, setTalkBtn] = useState(true);
+  const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
     setHomeBtn(true);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', startScroll);
+    return () => window.removeEventListener('scroll', startScroll);
+  }, []);
+
+  // header에서 height값 받아 오기 ?
+  const startScroll = () => {
+    if (window.scrollY > 30) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
 
   const onBarClickHandle = () => {
     barBtn ? setBarBtn(false) : setBarBtn(true);
@@ -75,6 +90,7 @@ const App = (props) => {
         projectsBtn={projectsBtn}
         aboutBtn={aboutBtn}
         talkBtn={talkBtn}
+        scroll={scroll}
       />
       <Routes>
         <Route
