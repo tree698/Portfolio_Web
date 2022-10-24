@@ -6,6 +6,7 @@ import Features from '../../components/features/features';
 import Deployment from '../../components/deployment/deployment';
 import styles from './portfolio.module.css';
 import Footer from '../../components/footer/footer';
+// import Arrow from '../../components/arrow/arrow';
 
 const Portfolio = (props) => {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ const Portfolio = (props) => {
         navigate('/overview');
     }
   };
+
   return (
     <section className={styles.container}>
       <main className={styles.main}>
@@ -137,6 +139,7 @@ const Portfolio = (props) => {
           </section>
         </div>
       </main>
+      {/* <Arrow /> */}
       <Footer />
     </section>
   );

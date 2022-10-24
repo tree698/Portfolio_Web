@@ -26,15 +26,6 @@ const Header = ({
     navigate('/');
   }, []);
 
-  // headerHeight 값을 app에 전달
-  // const ref = useRef();
-  // const [headerHeight2, setHeaderHeight] = useState();
-  // useEffect(() => {
-  //   const headerHeight = ref.current.getBoundingClientRect().height;
-  //   setHeaderHeight(headerHeight);
-
-  // });
-
   const onImgClick = () => {
     navigate('/');
     onImg();
@@ -70,11 +61,10 @@ const Header = ({
 
   return (
     <div
-      // ref={ref}
       className={
         scroll ? `${styles.header} ${styles.scrolled}` : `${styles.header}`
       }
-      // id="header"
+      id="header"
     >
       <button onClick={onImgClick}>
         <img

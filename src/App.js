@@ -6,6 +6,7 @@ import Portfolio from './page/portfolio/portfolio';
 import Projects from './page/projects/projects';
 import About from './page/about/about';
 import Contact from './page/contact/contact';
+import Arrow from './components/arrow/arrow';
 import styles from './App.module.css';
 
 const App = (props) => {
@@ -16,6 +17,7 @@ const App = (props) => {
   const [aboutBtn, setAboutBtn] = useState(false);
   const [talkBtn, setTalkBtn] = useState(true);
   const [scroll, setScroll] = useState(false);
+  const [arrow, setArrow] = useState(false);
 
   useEffect(() => {
     setHomeBtn(true);
@@ -26,12 +28,27 @@ const App = (props) => {
     return () => window.removeEventListener('scroll', startScroll);
   }, []);
 
-  // header에서 height값 받아 오기 ?
+  // header에서 height값 받아 오기 ? => app에서 직접 받아 올수 있다!!!
   const startScroll = () => {
     if (window.scrollY > 30) {
       setScroll(true);
     } else {
       setScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', showArrow);
+    return () => window.removeEventListener('scroll', showArrow);
+  });
+
+  const showArrow = () => {
+    const header = document.querySelector('#header');
+    const headerHeight = header.getBoundingClientRect().height;
+    if (window.scrollY > headerHeight) {
+      setArrow(true);
+    } else {
+      setArrow(false);
     }
   };
 
@@ -74,6 +91,11 @@ const App = (props) => {
     setTalkBtn(true);
   }
 
+  const onArrowClickHandle = () => {
+    const section = document.querySelector('section');
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <BrowserRouter>
       <Header
@@ -108,6 +130,7 @@ const App = (props) => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Arrow arrow={arrow} onArrowClick={onArrowClickHandle} />
     </BrowserRouter>
   );
 };
