@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import OverView from '../../components/overView/overView';
 import TechStack from '../../components/techStack/techStack';
@@ -8,7 +8,7 @@ import styles from './portfolio.module.css';
 import Footer from '../../components/footer/footer';
 // import Arrow from '../../components/arrow/arrow';
 
-const Portfolio = (props) => {
+const Portfolio = memo((props) => {
   const navigate = useNavigate();
   const [overviewBtn, setOverviewBtn] = useState(false);
   const [techStackBtn, setTechStackBtn] = useState(false);
@@ -143,6 +143,6 @@ const Portfolio = (props) => {
       <Footer />
     </section>
   );
-};
+});
 
 export default Portfolio;

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './displayProject.module.css';
 
-const DisplayProject = ({ project }) => {
+const DisplayProject = memo(({ project }) => {
   const { href, title, description } = project;
   return (
     <a href={href} className={styles.project} target="blank">
@@ -12,6 +12,6 @@ const DisplayProject = ({ project }) => {
       </div>
     </a>
   );
-};
+});
 
 export default DisplayProject;

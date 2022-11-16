@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import DisplayProject from '../../components/displayProject/displayProject';
 import Footer from '../../components/footer/footer';
 import styles from './projects.module.css';
 
-const Projects = (props) => {
+const Projects = memo((props) => {
   const defaultProject = [
     {
       id: 1,
@@ -199,6 +199,6 @@ const Projects = (props) => {
       <Footer />
     </section>
   );
-};
+});
 
 export default Projects;

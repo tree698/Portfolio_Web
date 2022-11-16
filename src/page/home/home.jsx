@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './home.module.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/footer/footer';
+import { useCallback } from 'react';
 
-const Home = ({ onPortfolio, onProjects, onAbout }) => {
+const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
   const navigate = useNavigate();
 
-  const onGoToPortfolio = () => {
+  const onGoToPortfolio = useCallback(() => {
     navigate('/portfolio');
     onPortfolio();
-  };
-  const onGoToProjects = () => {
+  }, [onPortfolio]);
+
+  const onGoToProjects = useCallback(() => {
     navigate('/projects');
     onProjects();
-  };
-  const onGoToAbout = () => {
+  }, [onProjects]);
+
+  const onGoToAbout = useCallback(() => {
     navigate('/about');
     onAbout();
-  };
+  }, [onAbout]);
 
   return (
     <section className={styles.container}>
@@ -73,6 +76,6 @@ const Home = ({ onPortfolio, onProjects, onAbout }) => {
       <Footer />
     </section>
   );
-};
+});
 
 export default Home;
