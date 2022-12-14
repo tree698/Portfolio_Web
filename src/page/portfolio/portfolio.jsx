@@ -119,27 +119,34 @@ const Portfolio = memo((props) => {
           <div className={styles.divider}></div>
 
           <h1 className={styles.demoTitle}>DEMO</h1>
-          <section className={styles.demo}>
-            <div className={styles.demoImg_wrap}>
-              <img className={styles.demoImg} src="images/logo1.png" alt="" />
+          <section className={styles.demos}>
+            <div className={styles.demo}>
+              <div className={styles.demoImg_wrap}>
+                <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              </div>
               <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
             </div>
-            <div className={styles.demoImg_wrap}>
-              <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              <h3 className={styles.demoImgTitle}>Upload </h3>
+            <div className={styles.demo}>
+              <div className={styles.demoImg_wrap}>
+                <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              </div>
+              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
             </div>
-            <div className={styles.demoImg_wrap}>
-              <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              <h3 className={styles.demoImgTitle}>Chatting </h3>
+            <div className={styles.demo}>
+              <div className={styles.demoImg_wrap}>
+                <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              </div>
+              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
             </div>
-            <div className={styles.demoImg_wrap}>
-              <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              <h3 className={styles.demoImgTitle}>Chatting </h3>
+            <div className={styles.demo}>
+              <div className={styles.demoImg_wrap}>
+                <img className={styles.demoImg} src="images/logo1.png" alt="" />
+              </div>
+              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
             </div>
           </section>
         </div>
       </main>
-      {/* <Arrow /> */}
       <Footer />
     </section>
   );

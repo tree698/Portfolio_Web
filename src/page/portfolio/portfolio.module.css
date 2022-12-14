@@ -13,9 +13,8 @@
   padding: 20px 10px;
 }
 
-.portfolioImg_wrap,
-.demoImg_wrap {
-  width: 80%;
+.portfolioImg_wrap {
+  width: 65%;
   margin: 14px auto;
   padding: 10px;
 
@@ -26,10 +25,10 @@
   box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
 }
 
-.portfolioImg,
-.demoImg {
+.portfolioImg {
   width: 100%;
   height: 100%;
+  border: 1px solid black;
   border-radius: var(--size-border-radius-btn);
 }
 
@@ -86,6 +85,41 @@
   background-color: var(--color-super-light-grey);
 }
 
+.demoTitle {
+  margin-bottom: 20px;
+}
+
+.demos {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.demoImg_wrap {
+  flex: 1 1 60%;
+}
+
+.demoImgTitle {
+  flex: 1 1 40%;
+  align-self: center;
+  margin: 0;
+  font-size: var(--font-regular);
+}
+
+.demoImg {
+  width: 100%;
+  height: 100%;
+
+  border-radius: var(--size-border-radius-big);
+  -webkit-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+}
+
 @media screen and (min-width: 768px) {
   :root {
     /* Font size */
@@ -134,12 +168,7 @@
   }
 
   .portfolioImg_wrap {
-    width: 64%;
     margin: 20px auto;
-  }
-
-  .portfolioImg_wrap,
-  .demoImg_wrap {
     padding: 20px;
   }
 
@@ -167,18 +196,16 @@
     margin: 80px;
   }
 
-  .demoImg_wrap {
-    width: 46%;
-    margin: 20px auto;
+  .demoTitle {
+    margin-bottom: 30px;
   }
 
   .demo {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 28px;
   }
 
-  .demoImg {
-    height: auto;
+  .demoImgTitle {
+    font-size: var(--font-medium);
   }
 }
 
@@ -230,18 +257,10 @@
   }
 
   .portfolio {
-    display: flex;
-    align-items: center;
     margin-top: 60px;
   }
 
   .portfolioImg_wrap {
-    width: 90%;
-    margin: 0;
-  }
-
-  .portfolioImg_wrap,
-  .demoImg_wrap {
     padding: 20px;
   }
 
@@ -269,8 +288,15 @@
     margin: 120px;
   }
 
-  .demoImg_wrap {
-    width: 30%;
-    margin: 20px auto;
+  .demoTitle {
+    margin-bottom: 50px;
+  }
+
+  .demo {
+    margin-bottom: 44px;
+  }
+
+  .demoImgTitle {
+    font-size: var(--font-large);
   }
 }
