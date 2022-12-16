@@ -4,7 +4,7 @@
 } */
 
 .main {
-  padding-top: 95px;
+  padding-top: 110px;
   max-width: 310px;
   margin: auto;
 }
@@ -45,7 +45,7 @@
   }
 
   .main {
-    padding-top: 85px;
+    padding-top: 140px;
     max-width: 688px;
   }
 }
@@ -86,7 +86,7 @@
   }
 
   .main {
-    padding-top: 110px;
+    padding-top: 200px;
     max-width: 1200px;
   }
 }
