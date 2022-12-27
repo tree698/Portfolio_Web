@@ -41,7 +41,7 @@ const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
                 <img className={styles.itemImg} src="images/logo1.png" alt="" />
               </div>
               <div className={styles.itemInfo_wrap}>
-                <h2 className={styles.itemTitle}>Full Stack</h2>
+                <h3 className={styles.itemTitle}>My Portfolio TalkTalk</h3>
                 <p className={styles.itemDescript}>
                   A reliable Web ProgrammerA reliable Web
                 </p>
@@ -52,7 +52,7 @@ const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
                 <img className={styles.itemImg} src="images/logo1.png" alt="" />
               </div>
               <div className={styles.itemInfo_wrap}>
-                <h2 className={styles.itemTitle}>14+ Small-Projects</h2>
+                <h3 className={styles.itemTitle}>14+ Side Projects</h3>
                 <p className={styles.itemDescript}>
                   A reliable Web ProgrammerA reliable Web
                 </p>
@@ -63,7 +63,7 @@ const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
                 <img className={styles.itemImg} src="images/logo1.png" alt="" />
               </div>
               <div className={styles.itemInfo_wrap}>
-                <h2 className={styles.itemTitle}>Clean Code</h2>
+                <h3 className={styles.itemTitle}>Enthusiastic Learner</h3>
                 <p className={styles.itemDescript}>
                   A reliable Web ProgrammerA reliable Web
                 </p>
@@ -71,9 +71,13 @@ const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
             </button>
           </div>
         </div>
-        <img className={styles.image} src="images/me.png" alt="" />
+        <div className={styles.image_wrap}>
+          <img className={styles.image} src="images/myself.png" alt="" />
+        </div>
       </main>
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </section>
   );
 });

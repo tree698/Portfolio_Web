@@ -19,6 +19,7 @@ const About = (props) => {
             at, numquam culpa doloremque minus esse consequuntur quo excepturi
             quod ad consequatur magnam?
           </h3>
+          <img src="images/coreSkills.png" alt="" />
           <div className={styles.majors}>
             <div className={styles.major}>
               <div className={styles.major_icon}>

@@ -70,36 +70,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  :root {
-    /* Font size */
-    --font-large: 40px;
-    --font-medium: 24px;
-    --font-regular: 15px;
-    --font-small: 13px;
-    --font-micro: 11px;
-  }
-
-  /* Typography */
-  h1 {
-    font-size: var(--font-large);
-    margin: 14px 0px;
-  }
-
-  h2 {
-    font-size: var(--font-medium);
-    margin: 7px 0;
-  }
-
-  h3 {
-    font-size: var(--font-medium);
-    margin: 7px 0;
-  }
-
-  p {
-    font-size: var(--font-regular);
-    margin: 4px 0;
-  }
-
   .project {
     width: 220px;
     height: 220px;
@@ -120,36 +90,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  :root {
-    /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
-  }
-
-  /* Typography */
-  h1 {
-    font-size: var(--font-large);
-    margin: 16px 0px;
-  }
-
-  h2 {
-    font-size: var(--font-medium);
-    margin: 8px 0;
-  }
-
-  h3 {
-    font-size: var(--font-regular);
-    margin: 8px 0;
-  }
-
-  p {
-    font-size: var(--font-regular);
-    margin: 4px 0;
-  }
-
   .project {
     width: 260px;
     height: 260px;

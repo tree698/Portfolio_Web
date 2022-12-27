@@ -67,40 +67,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  :root {
-    /* Font size */
-    --font-large: 40px;
-    --font-medium: 24px;
-    --font-regular: 15px;
-    --font-small: 13px;
-    --font-micro: 11px;
-
-    /* size */
-    --size-border-radius-big: 24px;
-    --size-border-radius-btn: 8px;
-  }
-
-  /* Typography */
-  h1 {
-    font-size: var(--font-large);
-    margin: 14px 0px;
-  }
-
-  h2 {
-    font-size: var(--font-medium);
-    margin: 7px 0;
-  }
-
-  h3 {
-    font-size: var(--font-medium);
-    margin: 7px 0;
-  }
-
-  p {
-    font-size: var(--font-regular);
-    margin: 4px 0;
-  }
-
   .main {
     padding-top: 85px;
     max-width: 688px;
@@ -127,40 +93,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  :root {
-    /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
-
-    /* size */
-    --size-border-radius-big: 30px;
-    --size-border-radius-btn: 10px;
-  }
-
-  /* Typography */
-  h1 {
-    font-size: var(--font-large);
-    margin: 16px 0px;
-  }
-
-  h2 {
-    font-size: var(--font-medium);
-    margin: 8px 0;
-  }
-
-  h3 {
-    font-size: var(--font-regular);
-    margin: 8px 0;
-  }
-
-  p {
-    font-size: var(--font-regular);
-    margin: 4px 0;
-  }
-
   .main {
     padding-top: 110px;
     max-width: 1200px;

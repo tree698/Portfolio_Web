@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px 16px 10px 16px;
+  padding: 16px;
+  /* border: 1px solid red; */
 
   width: 100vw;
   position: fixed;
@@ -13,7 +14,6 @@
 
 .scrolled {
   background-color: var(--color-background);
-  /* border-bottom: 1px solid var(--color-super-light-grey); */
   -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
@@ -43,6 +43,11 @@
   border-radius: var(--size-border-radius-btn);
 }
 
+.itemBtn,
+.talkBtn {
+  font-size: var(--font-regular);
+}
+
 .itemBtn {
   width: 100%;
   transition: all var(--animation-duration) ease-out;
@@ -55,10 +60,6 @@
 .itemBtn:hover {
   transform: scale(1.03);
   color: var(--color-font-blue);
-}
-
-.itemBtn {
-  font-size: var(--font-regular);
 }
 
 .talkBtn {
@@ -96,23 +97,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  :root {
-    /* Font size */
-    --font-large: 40px;
-    --font-medium: 24px;
-    --font-regular: 15px;
-    --font-small: 13px;
-    --font-micro: 11px;
-
-    /* size */
-    --size-border-radius-big: 24px;
-    --size-border-radius-btn: 8px;
-  }
-
   .header {
     flex-direction: row;
     align-items: center;
-    padding: 30px 30px 16px 30px;
+    padding: 20px 30px;
   }
 
   .logo {
@@ -142,11 +130,6 @@
     border-bottom: 2px solid var(--color-font-blue);
   }
 
-  .itemBtn,
-  .talkBtn {
-    font-size: var(--font-regular);
-  }
-
   .talkBtn {
     width: 180px;
     height: 40px;
@@ -159,34 +142,15 @@
 }
 
 @media screen and (min-width: 1024px) {
-  :root {
-    /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
-
-    /* size */
-    --size-border-radius-big: 30px;
-    --size-border-radius-btn: 10px;
-  }
-
   .header {
-    padding: 50px 60px 26px 60px;
+    padding: 30px 40px;
   }
 
   .item {
     margin: 0 16px;
   }
 
-  .itemBtn,
   .talkBtn {
-    font-size: var(--font-medium);
-  }
-
-  .talkBtn {
-    width: 250px;
-    height: 60px;
+    height: 46px;
   }
 }
