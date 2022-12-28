@@ -61,6 +61,118 @@ const Projects = memo((props) => {
       title: 'others',
       description: 'Clone coding with HTML, CSS',
     },
+    {
+      id: 9,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 10,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 11,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 12,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 13,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 14,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 15,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 16,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 17,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 18,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 19,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    {
+      id: 20,
+      href: '#',
+      dataName: 'others',
+      title: 'others',
+      description: 'Clone coding with HTML, CSS',
+    },
+    // {
+    //   id: 21,
+    //   href: '#',
+    //   dataName: 'others',
+    //   title: 'others',
+    //   description: 'Clone coding with HTML, CSS',
+    // },
+    // {
+    //   id: 22,
+    //   href: '#',
+    //   dataName: 'others',
+    //   title: 'others',
+    //   description: 'Clone coding with HTML, CSS',
+    // },
+    // {
+    //   id: 23,
+    //   href: '#',
+    //   dataName: 'others',
+    //   title: 'others',
+    //   description: 'Clone coding with HTML, CSS',
+    // },
+    // {
+    //   id: 24,
+    //   href: '#',
+    //   dataName: 'others',
+    //   title: 'others',
+    //   description: 'Clone coding with HTML, CSS',
+    // },
   ];
 
   const [all, setAll] = useState(true);
@@ -182,7 +294,6 @@ const Projects = memo((props) => {
             Others<span className={styles.category_count}>4</span>
           </button>
         </div>
-
         <div
           className={
             projects
