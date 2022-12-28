@@ -75,9 +75,8 @@ const Home = memo(({ onPortfolio, onProjects, onAbout }) => {
           <img className={styles.image} src="images/myself.png" alt="" />
         </div>
       </main>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+
+      <Footer />
     </section>
   );
 });

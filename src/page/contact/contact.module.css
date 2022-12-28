@@ -5,66 +5,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-
-.main_wrap {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main {
   max-width: 310px;
-  margin-top: 100px;
-  padding: 40px 15px;
-  /* background-color: var(--color-button); */
-  border-radius: var(--size-border-radius-btn);
-  text-align: center;
+  height: 100%;
 
-  -webkit-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  -moz-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.content {
-  padding: 20px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius-btn);
+.content_left {
+  text-align: center;
+}
 
-  /* -webkit-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  -moz-box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4);
-  box-shadow: 0px 0px 12px 4px rgba(77, 77, 77, 0.4); */
+.content_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .coffeeImg {
-  width: 54%;
+  width: 50%;
 }
 
 .message {
-  color: var(--color-dark-pink);
+  color: var(--color-button);
+  font-family: 'Nanum Pen Script', cursive;
 }
 
-.github {
-  margin: 4px 0;
-  font-size: var(--font-large);
-  color: var(--color-light-grey);
-  transition: all var(--animation-duration) ease-in-out;
-}
-
-.github:hover {
-  transform: rotate(45deg);
-  color: var(--color-dark-pink);
+.email_wrap,
+.mobile_wrap {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
 }
 
 .email,
 .mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 }
 
 .emailIcon,
@@ -76,48 +57,32 @@
 
 @media screen and (min-width: 768px) {
   .main {
-    max-width: 500px;
-    padding: 50px 20px;
-  }
-
-  .content {
-    display: flex;
-    align-items: center;
-    padding: 50px 20px;
-  }
-
-  .content_left {
-    flex: 1 1 40%;
-  }
-
-  .content_right {
-    flex: 1 1 60%;
+    max-width: 688px;
   }
 
   .coffeeImg {
-    width: 100%;
+    width: 60%;
   }
 
-  .emailIcon,
-  .mobileIcon {
-    margin-right: 10px;
-    font-size: var(--font-regular);
+  .email_wrap,
+  .mobile_wrap {
+    width: 170px;
+    margin-bottom: 5px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .main {
-    max-width: 960px;
-    padding: 70px 30px;
+    max-width: 900px;
   }
 
-  .content {
-    padding: 90px 30px;
+  .coffeeImg {
+    width: 70%;
   }
 
-  .emailIcon,
-  .mobileIcon {
-    margin-right: 20px;
-    font-size: var(--font-medium);
+  .email_wrap,
+  .mobile_wrap {
+    width: 200px;
+    margin-bottom: 7px;
   }
 }

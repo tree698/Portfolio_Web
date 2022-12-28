@@ -8,32 +8,22 @@ import Footer from '../../components/footer/footer';
 
 const Contact = (props) => (
   <section className={styles.container}>
-    <div className={styles.main_wrap}>
-      <main className={styles.main}>
-        <div className={styles.content}>
-          <div className={styles.content_left}>
-            <img className={styles.coffeeImg} src="images/coffee.png" alt="" />
-          </div>
-          <div className={styles.content_right}>
-            <h1 className={styles.message}>Love to hear from you</h1>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faSquareGithub}
-                className={styles.github}
-              />
-            </a>
-            <div className={styles.email}>
-              <FontAwesomeIcon icon={faEnvelope} className={styles.emailIcon} />
-              <h2>tree698@gmail.com</h2>
-            </div>
-            <div className={styles.mobile}>
-              <FontAwesomeIcon icon={faMobile} className={styles.mobileIcon} />
-              <h2>010-3779-3087</h2>
-            </div>
-          </div>
+    <main className={styles.main}>
+      <div className={styles.content_left}>
+        <img className={styles.coffeeImg} src="images/coffee.png" alt="" />
+      </div>
+      <div className={styles.content_right}>
+        <h1 className={styles.message}>Love to hear from you</h1>
+        <div className={styles.email_wrap}>
+          <FontAwesomeIcon icon={faEnvelope} className={styles.emailIcon} />
+          <h3 className={styles.email}>tree698@gmail.com</h3>
         </div>
-      </main>
-    </div>
+        <div className={styles.mobile_wrap}>
+          <FontAwesomeIcon icon={faMobile} className={styles.mobileIcon} />
+          <h3 className={styles.email}>010-3779-3087</h3>
+        </div>
+      </div>
+    </main>
     <Footer />
   </section>
 );
