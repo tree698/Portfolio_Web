@@ -6,7 +6,6 @@ import Features from '../../components/features/features';
 import Deployment from '../../components/deployment/deployment';
 import styles from './portfolio.module.css';
 import Footer from '../../components/footer/footer';
-// import Arrow from '../../components/arrow/arrow';
 
 const Portfolio = memo((props) => {
   const navigate = useNavigate();
@@ -15,10 +14,10 @@ const Portfolio = memo((props) => {
   const [featuresBtn, setFeaturesBtn] = useState(false);
   const [deploymentBtn, setDeploymentBtn] = useState(false);
 
-  useEffect(() => {
-    navigate('/portfolio/overview');
-    setOverviewBtn(true);
-  }, []);
+  // useEffect(() => {
+  //   navigate('/portfolio/overview');
+  //   setOverviewBtn(true);
+  // }, []);
 
   const onClick = (event) => {
     setOverviewBtn(false);
@@ -51,101 +50,86 @@ const Portfolio = memo((props) => {
   return (
     <section className={styles.container}>
       <main className={styles.main}>
-        <div className={styles.content}>
-          <h1 className={styles.portfolioTitle}>TalkTalk</h1>
-          <section className={styles.portfolio}>
+        <h2>TalkTalk</h2>
+        <h3>A chatting app</h3>
+        <section className={styles.portfolio}>
+          <div className={styles.portfolioImg_wrap}>
             <a href="#">
-              <div className={styles.portfolioImg_wrap}>
-                <img
-                  className={styles.portfolioImg}
-                  src="images/logo1.png"
-                  alt=""
-                />
-              </div>
+              <img
+                className={styles.portfolioImg}
+                src="images/coffee.png"
+                alt="TalkTalk-screenshot"
+              />
             </a>
-            <div className={styles.portfolioMenu}>
-              <div className={styles.menuBtn_container}>
-                <button
-                  className={
-                    overviewBtn
-                      ? `${styles.menuBtn} ${styles.active}`
-                      : `${styles.menuBtn}`
-                  }
-                  onClick={onClick}
-                >
-                  <h3>Overview</h3>
-                </button>
-                <button
-                  className={
-                    techStackBtn
-                      ? `${styles.menuBtn} ${styles.active}`
-                      : `${styles.menuBtn}`
-                  }
-                  onClick={onClick}
-                >
-                  <h3>Tech Stack</h3>
-                </button>
-                <button
-                  className={
-                    featuresBtn
-                      ? `${styles.menuBtn} ${styles.active}`
-                      : `${styles.menuBtn}`
-                  }
-                  onClick={onClick}
-                >
-                  <h3>Features</h3>
-                </button>
-                <button
-                  className={
-                    deploymentBtn
-                      ? `${styles.menuBtn} ${styles.active}`
-                      : `${styles.menuBtn}`
-                  }
-                  onClick={onClick}
-                >
-                  <h3>Deployment</h3>
-                </button>
-              </div>
+          </div>
+          <div className={styles.portfolioMenu}>
+            <div className={styles.menuBtn_container}>
+              <button
+                className={
+                  overviewBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
+                <h3>Overview</h3>
+              </button>
+              <button
+                className={
+                  techStackBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
+                <h3>Tech Stack</h3>
+              </button>
+              <button
+                className={
+                  featuresBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
+                <h3>Features</h3>
+              </button>
+              <button
+                className={
+                  deploymentBtn
+                    ? `${styles.menuBtn} ${styles.active}`
+                    : `${styles.menuBtn}`
+                }
+                onClick={onClick}
+              >
+                <h3>Deployment</h3>
+              </button>
+            </div>
+            <Routes>
+              <Route path="/overview" element={<OverView />} />
+              <Route path="/techstack" element={<TechStack />} />
+              <Route path="/features" element={<Features />} />
+              <Route path="/deployment" element={<Deployment />} />
+            </Routes>
+          </div>
+        </section>
 
-              <Routes>
-                <Route path="/overview" element={<OverView />} />
-                <Route path="/techstack" element={<TechStack />} />
-                <Route path="/features" element={<Features />} />
-                <Route path="/deployment" element={<Deployment />} />
-              </Routes>
-            </div>
-          </section>
+        <img
+          className={styles.divider}
+          src="images/dotline.png"
+          alt="dotline"
+        />
 
-          <div className={styles.divider}></div>
-
-          <h1 className={styles.demoTitle}>DEMO</h1>
-          <section className={styles.demos}>
-            <div className={styles.demo}>
-              <div className={styles.demoImg_wrap}>
-                <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              </div>
-              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
+        <section className={styles.demos}>
+          <div className={styles.demo}>
+            <div className={styles.demoImg_wrap}>
+              <img className={styles.demoImg} src="images/coffee.png" alt="" />
             </div>
-            <div className={styles.demo}>
-              <div className={styles.demoImg_wrap}>
-                <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              </div>
-              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
+            <div className={styles.demoTitle_wrap}>
+              <h3 className={styles.demoTitle}>SignIn & Signsdcds </h3>
             </div>
-            <div className={styles.demo}>
-              <div className={styles.demoImg_wrap}>
-                <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              </div>
-              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
-            </div>
-            <div className={styles.demo}>
-              <div className={styles.demoImg_wrap}>
-                <img className={styles.demoImg} src="images/logo1.png" alt="" />
-              </div>
-              <h3 className={styles.demoImgTitle}>SignIn & SignUp </h3>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </section>
