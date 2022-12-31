@@ -1,196 +1,132 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faDisplay,
-  faLaptopCode,
-  faServer,
-} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Footer from '../../components/footer/footer';
 import styles from './about.module.css';
 
 const About = (props) => {
   return (
-    <section className={styles.container}>
-      <main className={styles.main}>
-        <div className={styles.intro}>
-          <h3>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-            nisi sint similique facilis ratione deleniti deserunt? Distinctio
-            at, numquam culpa doloremque minus esse consequuntur quo excepturi
-            quod ad consequatur magnam?
-          </h3>
-          <img src="images/coreSkills.png" alt="" />
-          <div className={styles.majors}>
-            <div className={styles.major}>
-              <div className={styles.major_icon}>
-                <FontAwesomeIcon icon={faDisplay} className={styles.display} />
-              </div>
-              <h2>Front-end</h2>
-              <div className={styles.major_description}>
-                HTML, CSS, JavaScript, TypeScript,
-                <br />
-                React, Vue, Web APIs
-              </div>
-            </div>
-            <div className={styles.major}>
-              <div className={styles.major_icon}>
-                <FontAwesomeIcon
-                  icon={faLaptopCode}
-                  className={styles.display}
-                />
-              </div>
-              <h2>Clean Code</h2>
-              <div className={styles.major_description}>
-                HTML, CSS, JavaScript, TypeScript,
-                <br />
-                React, Vue, Web APIs
-              </div>
-            </div>
-            <div className={styles.major}>
-              <div className={styles.major_icon}>
-                <FontAwesomeIcon icon={faServer} className={styles.display} />
-              </div>
-              <h2>Back-end</h2>
-              <div className={styles.major_description}>
-                HTML, CSS, JavaScript, TypeScript,
-                <br />
-                React, Vue, Web APIs
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <section>
+      <div className={styles.intro}>
+        <img
+          className={styles.intro__photo}
+          src="images/myself_about.png"
+          alt=""
+        />
+        <h2>Frontend Developer</h2>
+        <p>who is making the better world</p>
+        <p className={styles.intro__message}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+          voluptatem ullam labore sequi adipisci dolor consectetur corrupti
+          voluptas dolorum rem, quis numquam impedit, placeat pariatur
+          architecto! Tenetur qui eum explicabo.
+        </p>
+      </div>
+      <div className={styles.skills__container}>
         <div className={styles.skills}>
-          <h2>Skills & Attributes</h2>
-          <div className={styles.skillset}>
-            <div className={styles.skillset_left}>
-              <h3 className={styles.skillset_title}>Skills</h3>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '99%' }}
-                  ></div>
-                </div>
-              </div>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '49%' }}
-                  ></div>
-                </div>
-              </div>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '89%' }}
-                  ></div>
-                </div>
-              </div>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '69%' }}
-                  ></div>
-                </div>
-              </div>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '79%' }}
-                  ></div>
-                </div>
-              </div>
-              <div className={styles.skill}>
-                <div className={styles.skill_description}>
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div className={styles.skill_bar}>
-                  <div
-                    className={styles.skill_value}
-                    style={{ width: '90%' }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.skillset_right}>
-              <div className={styles.tools}>
-                <h3 className={styles.skillset_title}>Tools</h3>
-                <ul className={styles.tools_list}>
-                  <li>
-                    <span>Visual Studio Code</span>
-                  </li>
-                  <li>
-                    <span>IntelliJ</span>
-                  </li>
-                  <li>
-                    <span>Android Studio Code</span>
-                  </li>
-                  <li>
-                    <span>iOS development tools</span>
-                  </li>
-                  <li>
-                    <span>Sketch app</span>
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.etc}>
-                <h3 className={styles.skillset_title}>Etc</h3>
-                <ul className={styles.etc_list}>
-                  <li>
-                    <span>Git</span>
-                  </li>
-                  <li>
-                    <span>Scrum master</span>
-                  </li>
-                  <li>
-                    <span>Math</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.education}>
+          <h2 className={styles.skills__title}>Skills & Attributes</h2>
+          <p className={styles.skills__message}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+            voluptatem ullam labore sequi adipisci dolor consectetur corrupti
+            voluptas dolorum rem, quis numquam impedit, placeat pariatur
+            architecto! Tenetur qui eum explicabo.
+          </p>
           <img
-            src="images/logo1.png"
+            className={styles.skills__img}
+            src="images/coreSkills-removebg.png"
             alt=""
-            className={styles.education_logo}
           />
-          <div className={styles.education_description}>
-            <p className={styles.education_name}>
-              Currently working at Samsung as Software Engineer
-            </p>
-            <p className={styles.education_period}>2019 Sept - Until now</p>
+        </div>
+      </div>
+      <div className={styles.education}>
+        <h2>Education & Training</h2>
+        <p className={styles.education__message}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+          voluptatem ullam labore sequi adipisci dolor consectetur corrupti
+          voluptas dolorum rem, quis numquam impedit, placeat pariatur
+          architecto! Tenetur qui eum explicabo.
+        </p>
+        <div className={styles.education__contents}>
+          <div className={styles.education__content}>
+            <a
+              href="https://www.knou.ac.kr/knou/index.do?epTicket=LOG"
+              target="_blank"
+            >
+              <img
+                className={styles.education__logo}
+                src="images/knou.png"
+                alt=""
+              />
+            </a>
+            <div>
+              <h3 className={styles.education__title}>
+                Korea National Open University
+              </h3>
+              <div className={styles.education__description}>
+                <p>- Bechelor of Science</p>
+                <p>- Department of Computer Science</p>
+                <p>- GPA: 4.2/4.5</p>
+                <p>- Graduation in Feb. 2023</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.education__content}>
+            <a
+              href="https://academy.dream-coding.com/enrollments"
+              target="_blank"
+            >
+              <img
+                className={styles.education__logo}
+                src="images/dreamCoding.png"
+                alt=""
+              />
+            </a>
+            <div>
+              <h3 className={styles.education__title}>Dream Coding</h3>
+              <div className={styles.education__description}>
+                <p>- Online Classes</p>
+                <p>- Completed in 10 courses</p>
+                <p>JavaScript, React, Node, TDD, TypeScript, Git ...</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.education__content}>
+            <a href="https://hyperskill.org/tracks" target="_blank">
+              <img
+                className={styles.education__logo}
+                src="images/jba.png"
+                alt=""
+              />
+            </a>
+            <div>
+              <h3 className={styles.education__title}>JetBrain Academy</h3>
+              <div className={styles.education__description}>
+                <p> - Online Classes </p>
+                <p> - Completed in Python track</p>
+
+                <a
+                  href="https://hyperskill.org/certificates/b25035ce-aad0-4d52-8a5b-e66681314c13.pdf"
+                  target="_blank"
+                >
+                  <p className={styles.certification__python}>
+                    👉 Certificatioin
+                  </p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
+      </div>
+      <div className={styles.others__container}>
+        <div className={styles.others}>
+          <h2 className={styles.others__title}>others</h2>
+          <p className={styles.others__message}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+            voluptatem ullam labore sequi adipisci dolor consectetur corrupti
+            voluptas dolorum rem, quis numquam impedit, placeat pariatur
+            architecto! Tenetur qui eum explicabo.
+          </p>
+          <img className={styles.others__img} src="images/az900.png" alt="" />
+        </div>
+      </div>
       <Footer />
     </section>
   );
