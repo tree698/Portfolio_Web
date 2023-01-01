@@ -52,7 +52,7 @@
 .mobileIcon {
   margin-right: 10px;
   color: var(--color-button-hover);
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
 }
 
 @media screen and (min-width: 768px) {
