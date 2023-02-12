@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { menus } from '../data/Menus';
+import CardMenu from './CardMenu';
 
 export default function Navbar() {
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <header className="flex justify-between border-b border-gray-300 p-3">
+    <header className="fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10">
       <Link to="/">
-        <img src="images/logo.png" alt="logo" className="w-40 h-20" />
+        <img
+          src="images/logo.png"
+          alt="logo"
+          className="w-16 h-9 md:w-36 md:h-20"
+        />
       </Link>
-      <nav className="flex items-center gap-6 font-semibold">
-        <Link to="/">Home</Link>
-        <Link to="/portfolio">Portfolio</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/about">About me</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+      <ul
+        className={
+          toggle
+            ? 'flex flex-col items-center md:block md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
+            : 'hidden md:block md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
+        }
+      >
+        {menus && menus.map((menu) => <CardMenu key={menu.id} menu={menu} />)}
+      </ul>
+      <button
+        onClick={() => setToggle((prev) => !prev)}
+        className="absolute top-4 right-4 text-md md:hidden"
+      >
+        <FaBars />
+      </button>
     </header>
   );
 }

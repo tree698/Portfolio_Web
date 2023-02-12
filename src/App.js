@@ -4,11 +4,13 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <>
+    <section className="w-full h-screen flex flex-col">
       <Navbar />
-      <Outlet />
+      <div className="flex-1">
+        <Outlet />
+      </div>
       <Footer />
-    </>
+    </section>
   );
 }
 

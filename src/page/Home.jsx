@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Home() {
-  return <div>Home</div>;
+  return <section className="pt-[105px]">Home</section>;
 }

@@ -2,14 +2,18 @@
 module.exports = {
   content: ['./src/**/*.{jsx,js}'],
   theme: {
+    colors: {
+      brand: '#087f5b',
+      subBrand: '#0ca678',
+      background: '#ecf1f4',
+      font: '#2d2d2d',
+      white: '#ffffff',
+      lightGray: '#7c7979',
+      superLightGray: '#ddd9d9',
+    },
     extend: {
-      colors: {
-        brand: '#0c90e4',
-        background: '#ecf1f4',
-        font: '#475258',
-        white: '#ffffff',
-        lightGray: '#7c7979',
-        superLightGray: '#ddd9d9',
+      rotate: {
+        '17': '17deg',
       },
     },
   },

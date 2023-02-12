@@ -15,8 +15,8 @@ body {
 }
 
 #root {
-  /* @apply w-full h-full; */
-  @apply w-full max-w-screen-2xl;
+  /* @apply w-full max-w-screen-2xl h-full; */
+  @apply w-full h-full;
 }
 
 code {
