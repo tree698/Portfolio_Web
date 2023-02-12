@@ -4,8 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/
-.yarnrc.yml
 
 # testing
 /coverage
@@ -14,7 +12,6 @@
 /build
 
 # misc
-.vscode/
 .DS_Store
 .env.local
 .env.development.local
