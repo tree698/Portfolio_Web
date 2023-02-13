@@ -4,7 +4,7 @@ import { threePoints } from '../data/ThreePoints';
 
 export default function Home() {
   return (
-    <section className="py-[90px] text-font w-full md:h-full max-w-7xl mx-auto flex justify-center items-center">
+    <section className="py-[90px] text-font w-full h-full max-w-7xl mx-auto flex justify-center items-center">
       <div className="basis-3/5">
         <p className="text-2xl font-semibold mb-1">Hello I'm</p>
         <h1 className="text-5xl font-bold mb-10">CHANWOO LEE</h1>
