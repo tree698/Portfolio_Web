@@ -8,7 +8,7 @@ export default function CardMenu({ menu }) {
         to={menu.path}
         className={({ isActive }) =>
           isActive
-            ? ' text-brand font-bold md:text-white md:bg-brand md:px-2 md:py-1 md:rounded-md'
+            ? ' text-brand font-bold md:text-white md:bg-brand md:px-4 md:py-1 md:rounded-md'
             : 'text-font hover:text-brand transition-all delay-150 duration-300 ease-in-out'
         }
       >
