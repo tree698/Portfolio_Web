@@ -4,11 +4,14 @@ import { FaBars } from 'react-icons/fa';
 import { menus } from '../data/Menus';
 import CardMenu from './CardMenu';
 
-export default function Navbar() {
+export default function Navbar({ isArrow }) {
   const [toggle, setToggle] = useState(false);
+  const HEADER_STYLE =
+    'fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10';
+  const HEADER_SHADOW_STYLE = `${HEADER_STYLE} border-b border-superLightGray shadow-md`;
 
   return (
-    <header className="fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10">
+    <header className={isArrow ? HEADER_SHADOW_STYLE : HEADER_STYLE}>
       <Link to="/">
         <img
           src="images/logo.png"
@@ -19,8 +22,8 @@ export default function Navbar() {
       <ul
         className={
           toggle
-            ? 'flex flex-col items-center md:block md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
-            : 'hidden md:block md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
+            ? 'flex flex-col items-center md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
+            : 'hidden md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
         }
       >
         {menus && menus.map((menu) => <CardMenu key={menu.id} menu={menu} />)}
