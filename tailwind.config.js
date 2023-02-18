@@ -3,13 +3,18 @@ module.exports = {
   content: ['./src/**/*.{jsx,js}'],
   theme: {
     colors: {
-      brand: '#2b8a3e',
-      accent: '#d9480f',
+      brand: '#73aace',
+      primaryAccent: '#d9480f',
+      secondaryAccent: '#2b8a3e',
       background: '#ecf1f4',
       font: '#2d2d2d',
       white: '#ffffff',
-      lightGray: '#7c7979',
-      superLightGray: '#ddd9d9',
+      // lightGray: '#7c7979',
+      superLightGray: '#CCCCCC',
+      lightPink: '#F7B3B3',
+      lightYellow: '#FFF7B3',
+      lightGreen: '#B3F7D1',
+      lightPurple: '#D1B3F7',
     },
     extend: {
       rotate: {

@@ -5,7 +5,7 @@ export default function Contact() {
   const STYLE_IMAGE = 'w-8 mr-4 md:w-1/12 md:mr-10 md:ml-28';
 
   return (
-    <section className="py-[90px] text-font w-full h-full max-w-xl mx-auto flex flex-col justify-center items-center">
+    <section className="pt-[111px] text-font w-full h-full max-w-xl mx-auto flex flex-col justify-center items-center">
       <img
         src="images/contactTitle.png"
         alt="title"
