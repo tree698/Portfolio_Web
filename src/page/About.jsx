@@ -18,7 +18,7 @@ export default function About() {
         <img
           className="w-24 md:w-40 lg:w-48 border-2 lg:border-4 border-white"
           style={{ borderRadius: '50%' }}
-          src="images/myself_about.png"
+          src="images/aboutMe/myself_about.png"
           alt="myself_photo"
         />
         <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold my-1">
@@ -46,7 +46,7 @@ export default function About() {
           </h1>
 
           <div className="">
-            <img src="images/aboutMe.png" alt="" />
+            <img src="images/aboutMe/aboutMe.png" alt="" />
           </div>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function About() {
             >
               <div className={STYLE_EDUCATION_BOX}>
                 <img
-                  src="images/knou.png"
+                  src="images/aboutMe/knou.png"
                   alt="knou logo"
                   className="w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px]"
                 />
@@ -86,7 +86,7 @@ export default function About() {
             >
               <div className={STYLE_EDUCATION_BOX}>
                 <img
-                  src="images/dreamCoding.png"
+                  src="images/aboutMe/dreamCoding.png"
                   alt="dreamCoding logo"
                   className="w-[50px] md:w-[70px] lg:w-[90px] h-[40px] md:h-[60px] lg:h-[80px]"
                 />
@@ -111,7 +111,7 @@ export default function About() {
                 rel="noreferrer"
               >
                 <img
-                  src="images/jba.png"
+                  src="images/aboutMe/jba.png"
                   alt="jba logo"
                   className="w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px]"
                 />
@@ -148,7 +148,7 @@ export default function About() {
             computing
           </p>
           <img
-            src="images/az900.png"
+            src="images/aboutMe/az900.png"
             alt="azure"
             className="w-3/6 mt-6 md:mt-8 lg:mt-10"
           />

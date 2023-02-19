@@ -13,11 +13,7 @@ export default function Navbar({ isArrow }) {
   return (
     <header className={isArrow ? HEADER_SHADOW_STYLE : HEADER_STYLE}>
       <Link to="/">
-        <img
-          src="images/logo.png"
-          alt="logo"
-          className="w-16 h-9 md:w-36 md:h-20"
-        />
+        <img src="logo.png" alt="logo" className="w-16 h-9 md:w-36 md:h-20" />
       </Link>
       <ul
         className={

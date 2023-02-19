@@ -1,7 +1,7 @@
 export const threePoints = [
   {
     id: '1',
-    image: 'images/portfolio.png',
+    image: 'images/home/portfolio.png',
     title: 'Portfolio',
     subTitle: '(Front + Back)',
     description: 'Comprehensive understanding of the web development process',
@@ -9,7 +9,7 @@ export const threePoints = [
   },
   {
     id: '2',
-    image: 'images/projects.gif',
+    image: 'images/home/projects.gif',
     title: '14+',
     subTitle: 'Side Projects',
     description:
@@ -18,7 +18,7 @@ export const threePoints = [
   },
   {
     id: '3',
-    image: 'images/learner.gif',
+    image: 'images/home/learner.gif',
     title: 'Enthusiastic ',
     subTitle: 'Learner',
     description:

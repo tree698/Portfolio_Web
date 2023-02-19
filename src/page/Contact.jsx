@@ -7,14 +7,14 @@ export default function Contact() {
   return (
     <section className="pt-[111px] text-font w-full h-full max-w-xl mx-auto flex flex-col justify-center items-center">
       <img
-        src="images/contactTitle.png"
+        src="images/contact/contactTitle.png"
         alt="title"
         className="w-7/12 md:w-11/12 mb-10"
       />
       <ul>
         <li className={STYLE_LI}>
           <img
-            src="images/contactPhone.png"
+            src="images/contact/contactPhone.png"
             alt="phone"
             className={STYLE_IMAGE}
           />
@@ -22,7 +22,7 @@ export default function Contact() {
         </li>
         <li className={STYLE_LI}>
           <img
-            src="images/contactMail.png"
+            src="images/contact/contactMail.png"
             alt="email"
             className={STYLE_IMAGE}
           />

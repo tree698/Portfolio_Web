@@ -23,7 +23,11 @@ export default function Home() {
         </ul>
       </div>
       <div className="hidden md:block md:basis-2/5">
-        <img src="images/me-whole.png" alt="" className="w-[500px] mx-auto" />
+        <img
+          src="images/home/me-whole.png"
+          alt=""
+          className="w-[500px] mx-auto"
+        />
       </div>
     </section>
   );
