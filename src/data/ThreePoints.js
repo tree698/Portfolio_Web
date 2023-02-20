@@ -10,7 +10,7 @@ export const threePoints = [
   {
     id: '2',
     image: 'images/home/projects.gif',
-    title: '14+',
+    title: '22+',
     subTitle: 'Side Projects',
     description:
       'Extensive practice experience with various web application projects',

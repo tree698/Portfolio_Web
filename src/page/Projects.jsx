@@ -1,29 +1,36 @@
-import React from 'react';
-import { projects } from '../data/SideProjects';
-import CardProjects from '../components/CardProjects';
+import React, { useState } from 'react';
+import CardButtons from '../components/CardButton/CardButtons';
+import CardProjects from '../components/CardProjects/CardProjects';
+import { defaultProjects } from '../data/SideProjects';
 
 export default function Projects() {
-  const handleClick = (e) => {};
+  const [projects, setProjects] = useState(defaultProjects);
+  const [anima, setAnima] = useState(false);
+
+  const handleFilter = (filter) => {
+    setAnima(true);
+    const filtered = defaultProjects.filter((p) => p.dataName.includes(filter));
+    setTimeout(() => {
+      filter === 'all' ? setProjects(defaultProjects) : setProjects(filtered);
+      setAnima(false);
+    }, 400);
+  };
+
+  const STYLE_PROJECTS =
+    'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-8 md:gap-y-10 lg:gap-y-16';
+  const STYLE_DISAPPEAR =
+    'opacity-0 scale-90 translate-y-12 transition-all delay-150 duration-400 ease-out';
+
   return (
-    <section>
-      <div>
-        <button data-filter="all" onClick={handleClick}>
-          All<span>18</span>
-        </button>
-        <button data-filter="html/css" onClick={handleClick}>
-          HTML/CSS<>1</>
-        </button>
-        <button data-filter="react" onClick={handleClick}>
-          React<span>2</span>
-        </button>
-        <button data-filter="node" onClick={handleClick}>
-          Node<span>3</span>
-        </button>
-        <button data-filter="others" onClick={handleClick}>
-          Others<span>4</span>
-        </button>
-      </div>
-      <ul>
+    <section className="text-font mx-auto max-w-xl md:max-w-3xl lg:max-w-screen-2xl pt-[111px] w-full h-full ">
+      <ul className="flex justify-center text-center text-lg md:text-xl lg:text-2xl mt-6 md:mt-8 lg:mt-12 mb-12 md:mb-14 lg:mb-20">
+        <CardButtons filter={handleFilter} />
+      </ul>
+      <ul
+        className={
+          anima ? `${STYLE_PROJECTS} ${STYLE_DISAPPEAR}` : `${STYLE_PROJECTS}`
+        }
+      >
         {projects &&
           projects.map((project) => (
             <CardProjects key={project.id} project={project} />

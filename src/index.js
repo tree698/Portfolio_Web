@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import NotFound from './page/NotFound';
 import Home from './page/Home';
 import Portfolio from './page/Portfolio';
-import Projects from './page/Projects';
 import About from './page/About';
 import Contact from './page/Contact';
+import Projects from './page/Projects';
 
 const router = createBrowserRouter([
   {
