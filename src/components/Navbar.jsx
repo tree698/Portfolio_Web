@@ -7,7 +7,7 @@ import CardMenu from './CardMenu';
 export default function Navbar({ isArrow }) {
   const [toggle, setToggle] = useState(false);
   const HEADER_STYLE =
-    'fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10';
+    'fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10 z-10';
   const HEADER_SHADOW_STYLE = `${HEADER_STYLE} border-b border-superLightGray shadow-md`;
 
   return (

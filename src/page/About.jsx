@@ -13,7 +13,7 @@ export default function About() {
     'border border-superLightGray w-[250px] md:w-[300px] lg:w-[320px] px-2 md:px-3 lg:px-6 py-8 md:py-12 lg:py-16 rounded-lg shadow-lg flex flex-col items-center hover:-translate-y-4 transition-all delay-150 duration-300 ease-in-out';
 
   return (
-    <section className="pt-[60px] md:pt-[70px] lg:pt-[80px] md:t-[80px] w-full h-full">
+    <section className="text-font pt-[60px] md:pt-[70px] lg:pt-[80px] w-full h-full">
       <section className={STYLE_WITHOUT_BG_COLOR}>
         <img
           className="w-24 md:w-40 lg:w-48 border-2 lg:border-4 border-white"
