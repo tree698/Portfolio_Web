@@ -3,8 +3,8 @@ import { TbClick } from 'react-icons/tb';
 
 export default function About() {
   const STYLE_WITHOUT_BG_COLOR =
-    'max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto my-10 md:my-14 lg:my-16 flex flex-col items-center';
-  const STYLE_WITH_BG_COLOR = 'w-full bg-brand py-10 md:py-14 lg:py-16';
+    'max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-10 md:py-14 lg:py-20 flex flex-col items-center';
+  const STYLE_WITH_BG_COLOR = 'w-full bg-brand py-10 md:py-14 lg:py-20';
   const STYLE_MAXWITH_CENTER =
     'w-full max-w-xl md:max-w-2xl lg:max-w-6xl flex flex-col items-center mx-auto';
   const STYLE_TITLE =
