@@ -8,7 +8,7 @@ export default function About() {
   const STYLE_MAXWITH_CENTER =
     'w-full max-w-xl md:max-w-2xl lg:max-w-6xl flex flex-col items-center mx-auto';
   const STYLE_TITLE =
-    'text-2xl md:text-3xl font-semibold mb-8 md:mb-10 lg:mb-12';
+    'text-xl md:text-2xl lg:text-3xl font-semibold mb-8 md:mb-10 lg:mb-12';
   const STYLE_EDUCATION_BOX =
     'border border-superLightGray w-[250px] md:w-[300px] lg:w-[320px] px-2 md:px-3 lg:px-6 py-8 md:py-12 lg:py-16 rounded-lg shadow-lg flex flex-col items-center hover:-translate-y-4 transition-all delay-150 duration-300 ease-in-out';
 
@@ -16,18 +16,18 @@ export default function About() {
     <section className="text-font pt-[60px] md:pt-[70px] lg:pt-[80px] w-full h-full">
       <section className={STYLE_WITHOUT_BG_COLOR}>
         <img
-          className="w-24 md:w-40 lg:w-48 border-2 lg:border-4 border-white"
+          className="w-24 md:w-40 lg:w-56 border-2 lg:border-4 border-white"
           style={{ borderRadius: '50%' }}
           src="images/aboutMe/myself_about.png"
           alt="myself_photo"
         />
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold my-1">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold mt-4 md:mt-6 lg:mt-8 mb-1 lg:mb-2">
           Frontend Developer
         </h1>
         <p className="text-base md:text-lg lg:text-xl">
           Let's work together to make the world a better place
         </p>
-        <p className="text-sm md:text-base lg:text-lg mt-6 md:mt-8 lg:mt-10 px-3 md:px-0">
+        <p className="text-sm md:text-base lg:text-lg mt-8 md:mt-8 lg:mt-14 px-3 md:px-0">
           I have developed a strong foundation in HTML, CSS, and JavaScript
           through my studies and personal projects, and I am familiar with
           popular front-end & back-end frameworks such as React, Node. Their

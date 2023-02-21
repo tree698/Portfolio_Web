@@ -9,8 +9,9 @@ import { BsCheck2Square } from 'react-icons/bs';
 
 export default function Portfolio() {
   const STYLE_WITHOUT_BG_COLOR =
-    'max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-10 md:py-14 lg:py-20 flex flex-col items-center';
-  const STYLE_WITH_BG_COLOR = 'w-full bg-brand py-10 md:py-14 lg:py-20';
+    'max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-10 md:py-14 lg:py-20 flex flex-col items-center px-4 md:px-0';
+  const STYLE_WITH_BG_COLOR =
+    'w-full bg-brand py-10 md:py-14 lg:py-20 px-4 md:px-0';
   const STYLE_MAXWITH_CENTER =
     'w-full max-w-xl md:max-w-2xl lg:max-w-6xl flex flex-col items-center mx-auto';
 
@@ -18,7 +19,7 @@ export default function Portfolio() {
     <section className="text-font pt-[60px] md:pt-[70px] lg:pt-[80px] w-full h-full">
       <section className={STYLE_WITHOUT_BG_COLOR}>
         <img src="images/portfolio/heading.png" alt="logo" className="w-2/5" />
-        <p className="text-xl my-10">
+        <p className="text-base md:text-lg lg:text-xl my-2 md:my-6 lg:my-10">
           An online communication platform for creators who use tools like
           &nbsp;
           <a
@@ -32,11 +33,11 @@ export default function Portfolio() {
           real-time chat with other members, providing opportunities to enhance
           their creative abilities and appreciate the works of other members.
         </p>
-        <GiPlatform className="text-4xl" />
+        <GiPlatform className="text-2xl md:text-3xl lg:text-4xl" />
       </section>
 
       <section className={STYLE_WITH_BG_COLOR}>
-        <h1 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 lg:mb-10 text-white text-center font-bold">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8 lg:mb-10 text-white text-center font-bold">
           Demo
         </h1>
         <div className={STYLE_MAXWITH_CENTER}>
@@ -52,7 +53,7 @@ export default function Portfolio() {
               className="rounded-md absolute top-0 left-0"
             />
           </div>
-          <div className="mt-10 md:mt-12 lg:mt-14 flex flex-col items-center">
+          <div className="mt-10 md:mt-16 lg:mt-20 flex flex-col items-center">
             <div className="text-center">
               <a
                 href="https://talk698.netlify.app/"
@@ -60,7 +61,7 @@ export default function Portfolio() {
               >
                 https://talk698.netlify.app/
               </a>
-              <p className="mt-2 md:mt-3 lg:mt-4 text-white font-semibold text-center text-sm md:text-xl lg:text-2xl">
+              <p className="mt-2 md:mt-3 lg:mt-4 text-white font-semibold text-center text-xs md:text-xl lg:text-2xl">
                 For testing purposes: (username) test, (password) 12345
               </p>
             </div>
@@ -76,7 +77,7 @@ export default function Portfolio() {
               <GiClick className="text-lightPink text-xl md:text-2xl " />
               <a
                 href="https://github.com/tree698/TalkTalk-Server"
-                className="text-white font-semibold text-xl md:text-2xl ml-4 md:ml-6 lg:ml-8 mr-1 md:mr-2 lg:mr-3 border-b hover:text-lightPink transition-all delay-150 duration-300 ease-in-out"
+                className="text-white font-semibold text-lg md:text-xl lg:text-2xl ml-4 md:ml-6 lg:ml-8 mr-1 md:mr-2 lg:mr-3 border-b hover:text-lightPink transition-all delay-150 duration-300 ease-in-out"
               >
                 Backend
               </a>
@@ -87,10 +88,10 @@ export default function Portfolio() {
       </section>
 
       <section className={STYLE_WITHOUT_BG_COLOR}>
-        <h1 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 lg:mb-10 text-center font-bold">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8 lg:mb-10 text-center font-bold">
           Tech Stack
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6 lg:gap-12 text-2xl font-semibold">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-6 lg:gap-12 text-lg md:text-xl lg:text-2xl font-semibold">
           <div>
             <img src="images/portfolio/frontend.png" alt="frontend" />
             <div className="flex items-center justify-center mt-2 md:mt-4 lg:mt-6">
@@ -119,11 +120,11 @@ export default function Portfolio() {
 
       <section className={STYLE_WITH_BG_COLOR}>
         <div className={STYLE_MAXWITH_CENTER}>
-          <h1 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 lg:mb-10 text-white text-center font-bold">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8 lg:mb-10 text-white text-center font-bold">
             Key Functions
           </h1>
           <div className="flex flex-col lg:flex-row">
-            <ul className="basis-1/2 lg:basis-2/5 mb-4 md:mb-8 lg:mb-0 text-lg md:text-xl lg:text-2xl text-white flex flex-col justify-center">
+            <ul className="basis-1/2 lg:basis-2/5 mb-4 md:mb-8 lg:mb-0 text-base md:text-xl lg:text-2xl text-white flex flex-col justify-center">
               <li className="flex items-center mb-1 md:mb-2 lg:mb-3 font-semibold">
                 <BsCheck2Square className="mr-2 md:mr-3 lg:mr-4" />
                 Signup, Login and Logout
@@ -161,7 +162,7 @@ export default function Portfolio() {
       </section>
 
       <section className={STYLE_WITHOUT_BG_COLOR}>
-        <h1 className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 lg:mb-10 text-center font-bold">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8 lg:mb-10 text-center font-bold">
           Key Features
         </h1>
         <div className="flex flex-col lg:flex-row">
@@ -173,7 +174,7 @@ export default function Portfolio() {
             />
           </div>
 
-          <ul className="basis-1/2 lg:basis-2/5 text-lg md:text-xl lg:text-2xl flex flex-col justify-center pl-0 lg:pl-12">
+          <ul className="basis-1/2 lg:basis-2/5 text-base md:text-xl lg:text-2xl flex flex-col justify-center pl-0 lg:pl-12">
             <li className="flex items-center mb-1 md:mb-2 lg:mb-3 font-semibold">
               <BsCheck2Square className="mr-4" />
               Responsive Web

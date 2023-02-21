@@ -3,7 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <footer className="text-font p-3 flex flex-col items-center">
+    <footer className="text-font p-3 flex flex-col items-center text-sm md:text-lg lg:text-xl">
       <div className="flex items-center">
         <address>
           <a
@@ -14,7 +14,7 @@ export default function Footer() {
           </a>
         </address>
         <a href="https://github.com/tree698/" target="_blank" rel="noreferrer">
-          <BsGithub className="ml-3 text-2xl hover:rotate-17 hover:scale-110 hover:hover:text-brand transition-all delay-150 duration-300 ease-in-out hover:shadow-xl" />
+          <BsGithub className="ml-2 lg:ml-3 text-lg md:text-xl lg:text-2xl hover:rotate-17 hover:scale-110 hover:hover:text-brand transition-all delay-150 duration-300 ease-in-out hover:shadow-xl" />
         </a>
       </div>
       <p>2023 Chanwoo@All Right Reserved</p>
