@@ -7,26 +7,30 @@ import CardMenu from './CardMenu';
 export default function Navbar({ isArrow }) {
   const [toggle, setToggle] = useState(false);
   const HEADER_STYLE =
-    'fixed top=0 left=0 w-full mx-auto bg-superLightGray md:bg-background flex flex-col md:flex-row md:justify-between py-4 px-10 z-10';
-  const HEADER_SHADOW_STYLE = `${HEADER_STYLE} border-b border-superLightGray shadow-md`;
+    'text-font fixed top=0 left=0 w-full flex flex-col mx-auto bg-superLightGray py-2 px-5 z-10 md:bg-background md:flex-row md:justify-between md:items-center ';
+  const HEADER_SHADOW_STYLE = `${HEADER_STYLE} border-b border-superLightGray shadow`;
 
   return (
     <header className={isArrow ? HEADER_SHADOW_STYLE : HEADER_STYLE}>
       <Link to="/">
-        <img src="logo.png" alt="logo" className="w-16 h-9 md:w-36 md:h-20" />
+        <img
+          src="logo.png"
+          alt="logo"
+          className="w-12 h-6 md:w-14 md:h-8 lg:w-16 lg:h-10"
+        />
       </Link>
       <ul
         className={
           toggle
-            ? 'flex flex-col items-center md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
-            : 'hidden md:flex md:flex-row md:items-center md:font-semibold md:text-xl'
+            ? 'flex flex-col items-center mt-1 md:flex md:flex-row md:mt-0'
+            : 'hidden md:flex md:flex-row md:gap-x-1 lg:gap-x-2'
         }
       >
         {menus && menus.map((menu) => <CardMenu key={menu.id} menu={menu} />)}
       </ul>
       <button
         onClick={() => setToggle((prev) => !prev)}
-        className="absolute top-4 right-4 text-md md:hidden"
+        className="absolute top-3 right-3 text-base md:hidden"
       >
         <FaBars />
       </button>

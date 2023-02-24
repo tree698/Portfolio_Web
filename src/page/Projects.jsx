@@ -17,13 +17,13 @@ export default function Projects() {
   };
 
   const STYLE_PROJECTS =
-    'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-8 md:gap-y-10 lg:gap-y-16';
+    'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 md:gap-x-2 lg:gap-x-3 gap-y-4 md:gap-y-6 lg:gap-y-8';
   const STYLE_DISAPPEAR =
-    'opacity-0 scale-90 translate-y-12 transition-all delay-150 duration-400 ease-out';
+    'opacity-0 scale-90 translate-y-4 md:translate-y-6 lg:translate-y-8 transition-all delay-150 duration-400 ease-out';
 
   return (
-    <section className="text-font mx-auto max-w-xl md:max-w-3xl lg:max-w-screen-2xl pt-[68px] md:pt-[111px] w-full h-full ">
-      <ul className="flex justify-center text-center text-lg md:text-xl lg:text-2xl m-12 md:m-14 lg:m-20">
+    <section className="pt-[56px] text-font mx-auto md:max-w-3xl lg:max-w-4xl w-full h-full ">
+      <ul className="flex justify-center text-center text-sm md:text-base lg:text-lg m-8 md:m-10 lg:m-12 pt-4 md:pt-4 lg:pt-4">
         <CardButtons filter={handleFilter} />
       </ul>
       <ul

@@ -42,9 +42,9 @@ export default function CardButtons({ filter }) {
   }
 
   const STYLE_BUTTON =
-    'text-sm md:text-xl lg:text-2xl bg-superLightGray shadow-md relative border border-superLightGray mx-1 lg:mx-2 py-0 md:py-2 lg:py-3 px-1 md:px-6 lg:px-12 rounded-md hover:scale-105 transition-all delay-150 duration-300 ease-in-out';
+    'text-sm md:text-base lg:text-lg shadow relative border border-superLightGray mx-1 lg:mx-2 py-0 md:py-1 px-2 md:px-3 lg:px-4 rounded-md hover:scale-105 transition-all delay-150 duration-300 ease-in-out';
   const STYLE_NUMBER =
-    'w-4 md:w-6 lg:w-8 h-4 md:h-6 lg:h-8 leading-4 md:leading-6 lg:leading-8 absolute -top-1 md:-top-3 lg:-top-4 -right-2 md:-right-1 text-sm md:text-lg lg:text-xl rounded-full bg-primaryAccent text-white';
+    'w-4 h-4 lg:w-6 lg:h-6 leading-4 md:leading-4 lg:leading-6 absolute -top-2 lg:-top-3 -right-2 md:-right-1 text-[10px] lg:text-sm rounded-full bg-primaryAccent text-white';
 
   return (
     <div>

@@ -3,7 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <footer className="text-font p-3 flex flex-col items-center text-sm md:text-lg lg:text-xl">
+    <footer className="text-font p-3 flex flex-col items-center text-xs md:text-sm">
       <div className="flex items-center">
         <address>
           <a

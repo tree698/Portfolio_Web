@@ -21,7 +21,7 @@ export const defaultProjects = [
     dataName: ['react', 'others'],
     title: 'New MyTube',
     src: 'images/projects/3.png',
-    description: 'Customized Youtube App + Tests for Unit, Integration and E2E',
+    description: 'Customized Youtube App + Test Code',
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const defaultProjects = [
     id: 5,
     href: 'https://github.com/tree698/TDD-Node__MyTwitter',
     dataName: ['others'],
-    title: 'Practice TDD for Node',
+    title: 'Practice TDD',
     src: 'images/projects/5.png',
     description:
       'Practice writing Unit and Integration Tests for code written in Node',
@@ -109,7 +109,7 @@ export const defaultProjects = [
     id: 14,
     href: 'https://github.com/tree698/Unit_Test_For_TDD',
     dataName: ['others'],
-    title: 'Practice TDD for Unit Test',
+    title: 'Practice TDD',
     src: 'images/projects/14.png',
     description: 'Practice writing Unit Tests with Jest',
   },
@@ -166,7 +166,7 @@ export const defaultProjects = [
     id: 21,
     href: 'https://github.com/tree698/TDD-React__Habit-Tracker',
     dataName: ['others'],
-    title: 'Practice TDD for React',
+    title: 'Practice TDD',
     src: 'images/projects/21.png',
     description:
       'Practice writing Unit and Integration Tests for code written in React',
