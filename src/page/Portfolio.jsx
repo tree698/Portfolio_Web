@@ -22,7 +22,7 @@ export default function Portfolio() {
     'h-7 md:h-8 lg:h-9 pl-1 md:pl-2 lg:pl-3 border-b border-superLightGray';
 
   return (
-    <section className="text-font pt-[56px] w-full h-full">
+    <section className="text-font pt-[40px] md:pt-[48px] lg:pt-[56px] w-full h-full">
       <section className={STYLE_WITHOUT_BG_COLOR}>
         <img
           src="images/portfolio/heading.png"

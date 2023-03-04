@@ -22,7 +22,7 @@ export default function Projects() {
     'opacity-0 scale-90 translate-y-4 md:translate-y-6 lg:translate-y-8 transition-all delay-150 duration-400 ease-out';
 
   return (
-    <section className="pt-[56px] text-font mx-auto md:max-w-3xl lg:max-w-4xl w-full h-full ">
+    <section className="pt-[40px] md:pt-[48px] lg:pt-[56px] text-font mx-auto md:max-w-3xl lg:max-w-4xl w-full h-full ">
       <ul className="flex justify-center text-center text-sm md:text-base lg:text-lg m-8 md:m-10 lg:m-12 pt-4 md:pt-4 lg:pt-4">
         <CardButtons filter={handleFilter} />
       </ul>

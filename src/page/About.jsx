@@ -14,10 +14,10 @@ export default function About() {
     ' flex flex-col items-center px-1 md:px-2 lg:px-3 py-8 md:py-10 lg:py-12 border border-superLightGray rounded shadow hover:-translate-y-1 md:hover:-translate-y-2 lg:hover:-translate-y-3 transition-all delay-150 duration-300 ease-in-out';
 
   return (
-    <section className="text-font pt-[57px] w-full h-full">
+    <section className="text-font pt-[40px] md:pt-[48px] lg:pt-[56px] w-full h-full">
       <section className={STYLE_WITHOUT_BG_COLOR}>
         <img
-          className="w-16 md:w-28 lg:w-40 border md:border-2 border-white"
+          className="w-24 md:w-36 lg:w-48 border md:border-2 border-white"
           style={{ borderRadius: '50%' }}
           src="images/aboutMe/myself_about.png"
           alt="myself_photo"

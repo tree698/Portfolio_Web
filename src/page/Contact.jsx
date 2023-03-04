@@ -5,7 +5,7 @@ export default function Contact() {
   const STYLE_IMAGE = 'w-4 md:w-6 lg:w-8 mr-2 md:mr-3 lg:mr-4';
 
   return (
-    <section className="pt-[56px] text-font w-full h-full max-w-xl mx-auto flex flex-col justify-center items-center">
+    <section className="pt-[40px] md:pt-[48px] lg:pt-[56px] text-font w-full h-full max-w-xl mx-auto flex flex-col justify-center items-center">
       <img
         src="images/contact/contactTitle.png"
         alt="title"
