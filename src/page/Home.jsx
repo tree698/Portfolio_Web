@@ -12,10 +12,10 @@ export default function Home() {
             CHANWOO LEE
           </h1>
           <p className="text-xs md:text-sm">
-            I am a <strong>Frontend Developer</strong> with a passion for
-            creating meaningful digital experiences. I believe that technology
-            can be used to <strong>make the world a better place</strong>, and I
-            am driven by the opportunity to use my skills to{' '}
+            I am a <strong>Web Developer</strong> with a passion for creating
+            meaningful digital experiences. I believe that technology can be
+            used to <strong>make the world a better place</strong>, and I am
+            driven by the opportunity to use my skills to{' '}
             <strong>improve people's lives</strong>.
           </p>
         </div>

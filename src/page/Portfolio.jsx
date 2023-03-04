@@ -9,7 +9,7 @@ import { BsCheck2Square } from 'react-icons/bs';
 
 export default function Portfolio() {
   const STYLE_WITHOUT_BG_COLOR =
-    'flex flex-col items-center mx-auto md:max-w-3xl lg:max-w-4xl py-12 md:py-14 lg:py-16 px-2 md:px-0';
+    'flex flex-col items-center mx-auto md:max-w-3xl lg:max-w-4xl py-10 md:py-14 lg:py-16 px-2 md:px-0';
   const STYLE_WITH_BG_COLOR =
     'w-full bg-brand py-10 md:py-14 lg:py-16 px-2 md:px-0';
   const STYLE_MAXWITH_CENTER =
@@ -27,9 +27,9 @@ export default function Portfolio() {
         <img
           src="images/portfolio/heading.png"
           alt="logo"
-          className="w-1/5 md:w-2/5"
+          className="w-2/5 mb-2 md:mb-4 lg:mb-6"
         />
-        <p className="text-sm md:text-base lg:text-lg my-2 md:my-4 lg:my-6">
+        <p className="text-sm md:text-base lg:text-lg my-4 md:my-5 lg:my-6">
           An online communication platform for creators who use tools like
           &nbsp;
           <a

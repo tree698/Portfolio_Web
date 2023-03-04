@@ -23,7 +23,7 @@ export default function About() {
           alt="myself_photo"
         />
         <h1 className="text-lg md:text-xl lg:text-2xl font-semibold mt-2 md:mt-4 lg:mt-6 mb-1 lg:mb-2">
-          Frontend Developer
+          Web Developer
         </h1>
         <p className="text-xs md:text-sm lg:text-base">
           Let's work together to make the world a better place
