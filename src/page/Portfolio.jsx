@@ -1,11 +1,13 @@
 import React from 'react';
-import { GiPlatform } from 'react-icons/gi';
 import { BsGithub } from 'react-icons/bs';
 import { GiClick } from 'react-icons/gi';
 import { TbHandFinger } from 'react-icons/tb';
 import { TbHandTwoFingers } from 'react-icons/tb';
 import { TbHandThreeFingers } from 'react-icons/tb';
 import { BsCheck2Square } from 'react-icons/bs';
+import { SiReasonstudios } from 'react-icons/si';
+import { MdDataUsage } from 'react-icons/md';
+import { SiSololearn } from 'react-icons/si';
 
 export default function Portfolio() {
   const STYLE_WITHOUT_BG_COLOR =
@@ -15,7 +17,7 @@ export default function Portfolio() {
   const STYLE_MAXWITH_CENTER =
     'w-full md:max-w-3xl lg:max-w-4xl flex flex-col items-center mx-auto';
   const STYLE_H1 =
-    'text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 lg:mb-8 text-center font-bold';
+    'text-lg md:text-xl lg:text-3xl mb-4 md:mb-6 lg:mb-8 text-center font-bold';
   const STYLE_TABLE =
     'w-full md:max-w-3xl lg:max-w-4xl mx-auto text-white text-xs md:text-sm lg:text-base border-collapse table-fixed';
   const STYLE_TD =
@@ -27,23 +29,81 @@ export default function Portfolio() {
         <img
           src="images/portfolio/heading.png"
           alt="logo"
-          className="w-2/5 mb-2 md:mb-4 lg:mb-6"
+          className="w-2/5 mb-6 md:mb-8 lg:mb-11"
         />
-        <p className="text-sm md:text-base lg:text-lg my-4 md:my-5 lg:my-6">
-          An online communication platform for creators who use tools like
-          &nbsp;
-          <a
-            href="https://apps.apple.com/kr/app/procreate/id425073498"
-            className="border-b text-lightGray"
-          >
-            Procreate
-          </a>
-          &nbsp; for their creative activities. After signing up for TalkTalk,
-          users can upload their own creations and receive feedback through
-          real-time chat with other members, providing opportunities to enhance
-          their creative abilities and appreciate the works of other members.
-        </p>
-        <GiPlatform className="text-xl md:text-2xl lg:text-3xl" />
+
+        <div className="w-full">
+          <div className="flex items-center justify-center md:justify-start text-base md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8 text-center font-semibold">
+            <SiReasonstudios />
+            <h1 className="ml-3">Why this TalkTalk...</h1>
+          </div>
+          <div className="flex items-center flex-col md:flex-row">
+            <img
+              src="images/portfolio/why.png"
+              alt="Why this TalkTalk"
+              className="w-20 md:w-28 lg:w-36 mr-0 md:mr-10 lg:mr-12 mb-3 md:mb-0"
+            />
+            <p className="text-xs md:text-sm lg:text-base">
+              Recently, I developed a hobby of drawing using &nbsp;
+              <a
+                href="https://apps.apple.com/kr/app/procreate/id425073498"
+                className="border-b text-lightGray"
+              >
+                Procreate
+              </a>
+              &nbsp;. I joined an online community of people with similar
+              interests to connect with other creators, but found the forum-only
+              platform inconvenient. I thought that there was a need for a
+              website where creators could chat and evaluate each other's works
+              in real-time, so I created TalkTalk.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full my-4 md:my-6 lg:my-8">
+          <div className="flex items-center justify-center md:justify-end text-base md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8 text-center font-semibold">
+            <MdDataUsage />
+            <h1 className="ml-3">How to use it...</h1>
+          </div>
+          <div className="flex items-center flex-col md:flex-row">
+            <p className="text-xs md:text-sm lg:text-base order-last md:-order-last">
+              An online communication platform for creators who use tools like
+              Procreate for their creative activities. After signing up for
+              TalkTalk, users can upload their own creations and receive
+              feedback through real-time chat with other members, providing
+              opportunities to enhance their creative abilities and appreciation
+              the works of other members.
+            </p>
+            <img
+              src="images/portfolio/how.png"
+              alt="Why this TalkTalk"
+              className="w-20 md:w-28 lg:w-36 ml-0 md:ml-10 lg:ml-12 mb-3 md:mb-0"
+            />
+          </div>
+        </div>
+
+        <div className="w-full">
+          <div className="flex items-center justify-center md:justify-start text-base md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8 text-center font-semibold">
+            <SiSololearn />
+            <h1 className="ml-3">What I learned...</h1>
+          </div>
+          <div className="flex items-center flex-col md:flex-row">
+            <img
+              src="images/portfolio/what.png"
+              alt="Why this TalkTalk"
+              className="w-20 md:w-28 lg:w-36 mr-0 md:mr-10 lg:mr-12 mb-3 md:mb-0"
+            />
+            <p className="text-xs md:text-sm lg:text-base">
+              I gained a deeper understanding of the web development process.
+              Specifically, I learned about methods to improve user experience
+              and optimize performance, communicate with servers, manage input
+              data to databases, and secure websites against external attacks.
+              By creating such a website, I was able to consolidate my
+              fragmented web knowledge and clarify concepts previously only in
+              my head.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className={STYLE_WITH_BG_COLOR}>
@@ -176,7 +236,7 @@ export default function Portfolio() {
               <img
                 src="images/portfolio/talk-landing.png"
                 alt="talk-main"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -190,7 +250,7 @@ export default function Portfolio() {
             <img
               src="images/portfolio/talk-chatting.png"
               alt="talk-chatting"
-              className="w-full rounded shadow"
+              className="w-full rounded-lg shadow-md"
             />
           </div>
           <ul className="basis-1/2 lg:basis-2/5 text-sm md:text-base lg:text-lg flex flex-col justify-center pl-0 md:pl-8">
