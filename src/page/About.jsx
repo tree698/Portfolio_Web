@@ -80,7 +80,7 @@ export default function About() {
             </a>
 
             <a
-              href="https://academy.dream-coding.com/enrollments"
+              href="https://academy.dream-coding.com/courses"
               target="_blank"
               rel="noreferrer"
             >
