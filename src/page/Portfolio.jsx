@@ -11,9 +11,9 @@ import { SiSololearn } from 'react-icons/si';
 
 export default function Portfolio() {
   const STYLE_WITHOUT_BG_COLOR =
-    'flex flex-col items-center mx-auto md:max-w-3xl lg:max-w-4xl py-10 md:py-14 lg:py-16 px-2 md:px-0';
+    'flex flex-col items-center mx-auto md:max-w-3xl lg:max-w-4xl py-10 md:py-14 lg:py-24 px-2 md:px-0';
   const STYLE_WITH_BG_COLOR =
-    'w-full bg-brand py-10 md:py-14 lg:py-16 px-2 md:px-0';
+    'w-full bg-brand py-10 md:py-14 lg:py-24 px-2 md:px-0';
   const STYLE_MAXWITH_CENTER =
     'w-full md:max-w-3xl lg:max-w-4xl flex flex-col items-center mx-auto';
   const STYLE_H1 =
@@ -389,6 +389,12 @@ export default function Portfolio() {
             </tr>
           </tbody>
         </table>
+      </section>
+
+      <section className={STYLE_WITHOUT_BG_COLOR}>
+        <h1 className={`${STYLE_H1}`}>Test Code</h1>
+        <img src="images/portfolio/unitTest.png" alt="test_coverage" />
+        <img src="images/portfolio/e2e.png" alt="e2e_test" className="mt-16" />
       </section>
     </section>
   );
