@@ -12,7 +12,7 @@
 ![TanStack_Query](https://img.shields.io/badge/-TanStack_Query-orange?style=flat&logo=TanStack_Query)
 
 ## :rocket:&nbsp; 배포
-- [https://my-portfolio698.netlify.app/](https://my-portfolio698.netlify.app/)
+- 잠시 중단
 
 ## :desktop_computer:&nbsp;데모
 |**스크린 샷**|
